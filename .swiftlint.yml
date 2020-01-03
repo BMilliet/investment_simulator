@@ -4,6 +4,7 @@ disabled_rules: # rule identifiers to exclude from running
 included:
 excluded: # paths to ignore during linting. Takes precedence over `included`.
   - Pods
+  - investment_simulatorTests
 opt_in_rules:
   - attributes
   - closure_end_indentation
