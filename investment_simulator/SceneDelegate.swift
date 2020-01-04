@@ -8,7 +8,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
              options connectionOptions: UIScene.ConnectionOptions) {
     guard let windowScene = (scene as? UIWindowScene) else { return }
 
-    let rootView = ViewController()
+    let rootView = FormView()
     let rootNavigationController = UINavigationController(rootViewController: rootView)
 
     window = UIWindow(frame: windowScene.coordinateSpace.bounds)
