@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		154689A823BFE0E400F32353 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154689A723BFE0E400F32353 /* ApiClient.swift */; };
+		154689AA23BFE10100F32353 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154689A923BFE10100F32353 /* ApiError.swift */; };
+		154689AC23BFE11F00F32353 /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154689AB23BFE11F00F32353 /* ApiRouter.swift */; };
+		154689AF23BFE15400F32353 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154689AE23BFE15400F32353 /* RequestError.swift */; };
+		154689B123BFE17C00F32353 /* RequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154689B023BFE17C00F32353 /* RequestResult.swift */; };
+		154689B423BFE1A100F32353 /* JsonDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154689B323BFE1A100F32353 /* JsonDecoder.swift */; };
+		154689B623BFE1D400F32353 /* StatusCodeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154689B523BFE1D400F32353 /* StatusCodeHandler.swift */; };
+		154689B923BFE20500F32353 /* ReachabilityHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154689B823BFE20500F32353 /* ReachabilityHandler.swift */; };
+		154689BB23BFE22700F32353 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154689BA23BFE22700F32353 /* Repository.swift */; };
+		154689BE23BFE4E600F32353 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154689BD23BFE4E600F32353 /* URL.swift */; };
+		154689C023BFE51500F32353 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154689BF23BFE51500F32353 /* UIView.swift */; };
+		154689C423BFE8EC00F32353 /* InvestmentParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154689C323BFE8EC00F32353 /* InvestmentParameter.swift */; };
+		154689C623BFE9BB00F32353 /* Simulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154689C523BFE9BB00F32353 /* Simulation.swift */; };
+		154689C823BFEE6700F32353 /* URLTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154689C723BFEE6700F32353 /* URLTest.swift */; };
+		154689CA23BFEE9F00F32353 /* StatusCodeHandlerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154689C923BFEE9F00F32353 /* StatusCodeHandlerTest.swift */; };
+		154689CD23BFEEDD00F32353 /* CompareHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154689CC23BFEEDD00F32353 /* CompareHelper.swift */; };
+		154689CF23BFEF1600F32353 /* ApiRouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154689CE23BFEF1600F32353 /* ApiRouterTest.swift */; };
 		15E7D12A23BFD16500B709AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E7D12923BFD16500B709AE /* AppDelegate.swift */; };
 		15E7D12C23BFD16500B709AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E7D12B23BFD16500B709AE /* SceneDelegate.swift */; };
 		15E7D12E23BFD16500B709AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E7D12D23BFD16500B709AE /* ViewController.swift */; };
@@ -28,6 +45,23 @@
 
 /* Begin PBXFileReference section */
 		0D8DF0A538C274ED1FF2E8F0 /* libPods-investment_simulator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-investment_simulator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		154689A723BFE0E400F32353 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		154689A923BFE10100F32353 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		154689AB23BFE11F00F32353 /* ApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
+		154689AE23BFE15400F32353 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
+		154689B023BFE17C00F32353 /* RequestResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestResult.swift; sourceTree = "<group>"; };
+		154689B323BFE1A100F32353 /* JsonDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDecoder.swift; sourceTree = "<group>"; };
+		154689B523BFE1D400F32353 /* StatusCodeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCodeHandler.swift; sourceTree = "<group>"; };
+		154689B823BFE20500F32353 /* ReachabilityHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityHandler.swift; sourceTree = "<group>"; };
+		154689BA23BFE22700F32353 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		154689BD23BFE4E600F32353 /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
+		154689BF23BFE51500F32353 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		154689C323BFE8EC00F32353 /* InvestmentParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentParameter.swift; sourceTree = "<group>"; };
+		154689C523BFE9BB00F32353 /* Simulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simulation.swift; sourceTree = "<group>"; };
+		154689C723BFEE6700F32353 /* URLTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLTest.swift; sourceTree = "<group>"; };
+		154689C923BFEE9F00F32353 /* StatusCodeHandlerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCodeHandlerTest.swift; sourceTree = "<group>"; };
+		154689CC23BFEEDD00F32353 /* CompareHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareHelper.swift; sourceTree = "<group>"; };
+		154689CE23BFEF1600F32353 /* ApiRouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRouterTest.swift; sourceTree = "<group>"; };
 		15E7D12623BFD16500B709AE /* investment_simulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = investment_simulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15E7D12923BFD16500B709AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15E7D12B23BFD16500B709AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +98,88 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		154689A523BFE07C00F32353 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				154689B723BFE1F100F32353 /* Reachability */,
+				154689B223BFE18E00F32353 /* Helpers */,
+				154689AD23BFE13B00F32353 /* Enum */,
+				154689A623BFE0C400F32353 /* API */,
+				154689BA23BFE22700F32353 /* Repository.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		154689A623BFE0C400F32353 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				154689A723BFE0E400F32353 /* ApiClient.swift */,
+				154689A923BFE10100F32353 /* ApiError.swift */,
+				154689AB23BFE11F00F32353 /* ApiRouter.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		154689AD23BFE13B00F32353 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				154689AE23BFE15400F32353 /* RequestError.swift */,
+				154689B023BFE17C00F32353 /* RequestResult.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		154689B223BFE18E00F32353 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				154689B323BFE1A100F32353 /* JsonDecoder.swift */,
+				154689B523BFE1D400F32353 /* StatusCodeHandler.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		154689B723BFE1F100F32353 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				154689B823BFE20500F32353 /* ReachabilityHandler.swift */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		154689BC23BFE4CD00F32353 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				154689BD23BFE4E600F32353 /* URL.swift */,
+				154689BF23BFE51500F32353 /* UIView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		154689C123BFE87400F32353 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				154689C223BFE8D400F32353 /* Decodables */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		154689C223BFE8D400F32353 /* Decodables */ = {
+			isa = PBXGroup;
+			children = (
+				154689C323BFE8EC00F32353 /* InvestmentParameter.swift */,
+				154689C523BFE9BB00F32353 /* Simulation.swift */,
+			);
+			path = Decodables;
+			sourceTree = "<group>";
+		};
+		154689CB23BFEEC800F32353 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				154689CC23BFEEDD00F32353 /* CompareHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		15E7D11D23BFD16500B709AE = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +203,9 @@
 		15E7D12823BFD16500B709AE /* investment_simulator */ = {
 			isa = PBXGroup;
 			children = (
+				154689C123BFE87400F32353 /* Models */,
+				154689BC23BFE4CD00F32353 /* Extensions */,
+				154689A523BFE07C00F32353 /* Network */,
 				15E7D12923BFD16500B709AE /* AppDelegate.swift */,
 				15E7D12B23BFD16500B709AE /* SceneDelegate.swift */,
 				15E7D12D23BFD16500B709AE /* ViewController.swift */,
@@ -100,7 +219,11 @@
 		15E7D13F23BFD16600B709AE /* investment_simulatorTests */ = {
 			isa = PBXGroup;
 			children = (
+				154689CB23BFEEC800F32353 /* Helpers */,
 				15E7D14223BFD16600B709AE /* Info.plist */,
+				154689C723BFEE6700F32353 /* URLTest.swift */,
+				154689C923BFEE9F00F32353 /* StatusCodeHandlerTest.swift */,
+				154689CE23BFEF1600F32353 /* ApiRouterTest.swift */,
 			);
 			path = investment_simulatorTests;
 			sourceTree = "<group>";
@@ -181,6 +304,7 @@
 					};
 					15E7D13B23BFD16600B709AE = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
 						TestTargetID = 15E7D12523BFD16500B709AE;
 					};
 				};
@@ -292,9 +416,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				154689C623BFE9BB00F32353 /* Simulation.swift in Sources */,
+				154689AF23BFE15400F32353 /* RequestError.swift in Sources */,
+				154689B623BFE1D400F32353 /* StatusCodeHandler.swift in Sources */,
 				15E7D12E23BFD16500B709AE /* ViewController.swift in Sources */,
+				154689B423BFE1A100F32353 /* JsonDecoder.swift in Sources */,
+				154689AC23BFE11F00F32353 /* ApiRouter.swift in Sources */,
+				154689BE23BFE4E600F32353 /* URL.swift in Sources */,
+				154689B923BFE20500F32353 /* ReachabilityHandler.swift in Sources */,
 				15E7D12A23BFD16500B709AE /* AppDelegate.swift in Sources */,
 				15E7D12C23BFD16500B709AE /* SceneDelegate.swift in Sources */,
+				154689C423BFE8EC00F32353 /* InvestmentParameter.swift in Sources */,
+				154689AA23BFE10100F32353 /* ApiError.swift in Sources */,
+				154689C023BFE51500F32353 /* UIView.swift in Sources */,
+				154689B123BFE17C00F32353 /* RequestResult.swift in Sources */,
+				154689A823BFE0E400F32353 /* ApiClient.swift in Sources */,
+				154689BB23BFE22700F32353 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +439,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				154689C823BFEE6700F32353 /* URLTest.swift in Sources */,
+				154689CF23BFEF1600F32353 /* ApiRouterTest.swift in Sources */,
+				154689CA23BFEE9F00F32353 /* StatusCodeHandlerTest.swift in Sources */,
+				154689CD23BFEEDD00F32353 /* CompareHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +626,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L8A5CGJRMF;
 				INFOPLIST_FILE = investment_simulatorTests/Info.plist;
@@ -496,6 +638,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "BMilliet.investment-simulatorTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/investment_simulator.app/investment_simulator";
@@ -508,6 +651,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L8A5CGJRMF;
 				INFOPLIST_FILE = investment_simulatorTests/Info.plist;
