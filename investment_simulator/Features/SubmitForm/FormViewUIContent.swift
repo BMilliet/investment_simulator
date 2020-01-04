@@ -2,17 +2,20 @@ import UIKit
 
 struct FormViewUIContent {
   static func valueAmountForm() -> UIView {
-    let formTextField = FormTextField(title: "Quanto voce gostaria de aplicar?", placeHolder: "R$")
+    let formTextField = FormTextField(title: AppStrings.amountToApply,
+                                      placeHolder: AppStrings.currency)
     return formTextField.build()
   }
 
   static func dateForm() -> UIView {
-    let formTextField = FormTextField(title: "Qual a data de vencimento do investimento?", placeHolder: "dia/mês/ano")
+    let formTextField = FormTextField(title: AppStrings.dueDate,
+                                      placeHolder: AppStrings.dateFormat)
     return formTextField.build()
   }
 
   static func CDIPercentForm() -> UIView {
-    let formTextField = FormTextField(title: "Qual o percentual do CDI do investimento?", placeHolder: "100%")
+    let formTextField = FormTextField(title: AppStrings.cdiPercent,
+                                      placeHolder: AppStrings.percentHolder)
     return formTextField.build()
   }
 }

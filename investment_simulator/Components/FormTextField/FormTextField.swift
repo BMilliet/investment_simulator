@@ -17,6 +17,7 @@ class FormTextField: CustomizableByClosure {
     container.addSubview(content.titleLabel)
     container.addSubview(content.textField)
     container.addSubview(content.bottonLine)
+    container.size(height: Dimens.size80)
   }
 
   private func setupConstraints() {

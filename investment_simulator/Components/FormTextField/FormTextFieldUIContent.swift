@@ -25,7 +25,7 @@ struct FormTextFieldUIContent: CustomizableByClosure {
   }
 
   lazy var bottonLine = customInit(UIView()) { line in
-    line.size(height: 1)
+    line.size(height: Dimens.size1)
     line.backgroundColor = Colors.extraLightColor
   }
 }

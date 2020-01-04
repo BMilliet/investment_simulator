@@ -3,6 +3,8 @@ import UIKit
 class FormView: UIViewController {
   let scrollView = UIScrollView()
   let valueAmountForm = FormViewUIContent.valueAmountForm()
+  let dateForm = FormViewUIContent.dateForm()
+  let cdiPercentForm = FormViewUIContent.CDIPercentForm()
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -12,24 +14,42 @@ class FormView: UIViewController {
   }
 
   private func setupLayoutComponents() {
+    setupValueAmountForm()
+    setupDateForm()
+    setupCDIPercentForm()
+  }
+
+  private func setupValueAmountForm() {
     scrollView.addSubview(valueAmountForm)
-    valueAmountForm.size(height: 80)
     valueAmountForm.anchor(top: scrollView.safeAreaLayoutGuide.topAnchor,
                            leading: scrollView.safeAreaLayoutGuide.leadingAnchor,
                            trailing: scrollView.safeAreaLayoutGuide.trailingAnchor,
-                           padding: UIEdgeInsets(top: 20,
-                                                 left: 16,
-                                                 bottom: -100,
-                                                 right: -16))
+                           padding: UIEdgeInsets(top: Dimens.spacing60,
+                                                 left: Dimens.spacing16,
+                                                 bottom: Dimens.zero,
+                                                 right: -Dimens.spacing16))
+  }
 
-//    let test = UIView()
-//    scrollView.addSubview(test)
-//    test.backgroundColor = .cyan
-//    test.size(height: 2000)
-//
-//    test.anchor(top: box.safeAreaLayoutGuide.bottomAnchor,
-//                leading: scrollView.safeAreaLayoutGuide.leadingAnchor,
-//                trailing: scrollView.safeAreaLayoutGuide.trailingAnchor)
+  private func setupDateForm() {
+    scrollView.addSubview(dateForm)
+    dateForm.anchor(top: valueAmountForm.safeAreaLayoutGuide.bottomAnchor,
+                    leading: scrollView.safeAreaLayoutGuide.leadingAnchor,
+                    trailing: scrollView.safeAreaLayoutGuide.trailingAnchor,
+                    padding: UIEdgeInsets(top: Dimens.spacing60,
+                                          left: Dimens.spacing16,
+                                          bottom: Dimens.zero,
+                                          right: -Dimens.spacing16))
+  }
+
+  private func setupCDIPercentForm() {
+    scrollView.addSubview(cdiPercentForm)
+    cdiPercentForm.anchor(top: dateForm.safeAreaLayoutGuide.bottomAnchor,
+                          leading: scrollView.safeAreaLayoutGuide.leadingAnchor,
+                          trailing: scrollView.safeAreaLayoutGuide.trailingAnchor,
+                          padding: UIEdgeInsets(top: Dimens.spacing60,
+                                                left: Dimens.spacing16,
+                                                bottom: Dimens.zero,
+                                                right: -Dimens.spacing16))
   }
 
   private func setupScrollView() {
