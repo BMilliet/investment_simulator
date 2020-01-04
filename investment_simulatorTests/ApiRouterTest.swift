@@ -12,30 +12,9 @@ class ApiRouterTest: QuickSpec {
 
     describe("#getMoviesEndPoint") {
       context("build movies endPoint") {
-        let expected = "https://api.themoviedb.org/3/movie/upcoming?api_key=1f54bd990f1cdfb230adb312546d765d&language=pt-BR"
-        let subject = apiRouter.getMoviesEndPoint()!.absoluteString
+        let expected = "https://api-simulator-calc.easynvest.com.br/calculator/simulate?investedAmount=32323.0&index=CDI&rate=100.0&isTaxFree=false&maturityDate=2023-03-03"
 
-        it("expected endpoint") {
-          expect(subject).to(equal(expected))
-        }
-      }
-    }
-
-    describe("#getPosterData") {
-      context("build poster endPoint") {
-       let expected = "https://image.tmdb.org/t/p/w500/mockPath"
-       let subject = apiRouter.getPosterEndPoint(with: "mockPath")!.absoluteString
-
-        it("expected endpoint") {
-          expect(subject).to(equal(expected))
-        }
-      }
-    }
-
-    describe("#getMovieGenres") {
-      context("build genre endPoint") {
-       let expected = "https://api.themoviedb.org/3/genre/movie/list?api_key=1f54bd990f1cdfb230adb312546d765d&language=pt-BR"
-       let subject = apiRouter.getMovieGenres()!.absoluteString
+        let subject = apiRouter.getSimulationEndPoint(investedAmountValue: 32323.0, rateValue: 100, maturityDateValue: "2023-03-03")!.absoluteString
 
         it("expected endpoint") {
           expect(subject).to(equal(expected))

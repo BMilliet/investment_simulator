@@ -2,34 +2,35 @@ import Foundation
 import UIKit
 
 struct ApiRouter {
-  private let ptBr = "pt-BR"
-  private let keyPrefix = "api_key"
-  private let lenguage = "language"
-  private let upcoming = "/upcoming"
-  private let list = "/list"
-  private let movieDetailOption = "/movie"
-  private let movieGenreOption = "/genre"
-  private let APIBaseUrl = "https://api.themoviedb.org/3"
-  private let apiKey = "1f54bd990f1cdfb230adb312546d765d"
-  private let APIPosterUrl = "https://image.tmdb.org/t/p/w500/"
+  private let baseUrl = "https://api-simulator-calc.easynvest.com.br"
+  private let calculateOption = "/calculator"
+  private let simulationOption = "/simulate"
+  private let investedAmount = "investedAmount"
+  private let index = "index"
+  private let cdi = "CDI"
+  private let rate = "rate"
+  private let isTaxFree = "isTaxFree"
+  private let maturityDate = "maturityDate"
 
-  func getMoviesEndPoint() -> URL? {
+  func getSimulationEndPoint(investedAmountValue: Double,
+                             rateValue: Double,
+                             maturityDateValue: String) -> URL? {
     return buildParams(
-      URL(string: buildPath([APIBaseUrl, movieDetailOption, upcoming])), apiKey)
+      URL(string: buildPath([baseUrl, calculateOption, simulationOption])),
+      investedAmountValue: String(investedAmountValue),
+      rateValue: String(rateValue),
+      maturityDateValue: maturityDateValue)
   }
 
-  func getPosterEndPoint(with path: String) -> URL? {
-    return URL(string: buildPath([APIPosterUrl, path]))
-  }
-
-  func getMovieGenres() -> URL? {
-    return buildParams(
-      URL(string: buildPath([APIBaseUrl, movieGenreOption, movieDetailOption, list])), apiKey)
-  }
-
-  private func buildParams(_ base: URL?, _ userKey: String) -> URL? {
-    return base?.appending([URLQueryItem(name: keyPrefix, value: userKey),
-                            URLQueryItem(name: lenguage, value: ptBr)])
+  private func buildParams(_ base: URL?,
+                           investedAmountValue: String,
+                           rateValue: String,
+                           maturityDateValue: String) -> URL? {
+    return base?.appending([URLQueryItem(name: investedAmount, value: investedAmountValue),
+                            URLQueryItem(name: index, value: cdi),
+                            URLQueryItem(name: rate, value: rateValue),
+                            URLQueryItem(name: isTaxFree, value: "false"),
+                            URLQueryItem(name: maturityDate, value: maturityDateValue)])
   }
 
   private func buildPath(_ array: [String]) -> String {
