@@ -9,6 +9,7 @@ class FormView: UIViewController, CustomizableByClosure {
   private let cdiPercentForm = FormViewUIContent.CDIPercentForm()
   private let dateForm = FormViewUIContent.dateForm()
   private let submitButton = FormViewUIContent.submitButton()
+  private let errorLabel = FormViewUIContent.errorLabel()
   private let scrollView = UIScrollView()
 
   override func viewDidLoad() {
@@ -24,6 +25,8 @@ class FormView: UIViewController, CustomizableByClosure {
     _ = valueAmountForm.getTextField().rx.text.map { $0 ?? "" }.bind(to: model.valueAmountText)
     _ = cdiPercentForm.getTextField().rx.text.map { $0 ?? "" }.bind(to: model.cdiPercentText)
     _ = dateForm.getTextField().rx.text.map { $0 ?? "" }.bind(to: model.dateText)
+    _ = model.errorMessage.bind(to: errorLabel.rx.text)
+    _ = model.errorLabelHidden.bind(to: errorLabel.rx.isHidden)
     _ = submitButton.rx.tap.bind { [weak self] in self?.model.buttonAction }.disposed(by: disposeBag)
   }
 
@@ -40,11 +43,12 @@ class FormView: UIViewController, CustomizableByClosure {
   private func addUIComponents() {
     view.addSubview(scrollView)
     scrollView.addSubview(stack)
-    stack.addArrangedSubview(valueAmountForm.build())
-    stack.addArrangedSubview(dateForm.build())
-    stack.addArrangedSubview(cdiPercentForm.build())
-    stack.addArrangedSubview(spacer)
-    stack.addArrangedSubview(submitButton)
+    stack.addArrangedSubviewArray([valueAmountForm.build(),
+                                   dateForm.build(),
+                                   cdiPercentForm.build(),
+                                   spacer,
+                                   submitButton,
+                                   errorLabel])
   }
 
   private func setupScrollConstraints() {
