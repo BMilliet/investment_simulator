@@ -10,6 +10,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     let rootView = FormView()
     let rootNavigationController = UINavigationController(rootViewController: rootView)
+    rootNavigationController.navigationBar.isHidden = true
 
     window = UIWindow(frame: windowScene.coordinateSpace.bounds)
     window?.windowScene = windowScene

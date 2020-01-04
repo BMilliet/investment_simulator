@@ -18,17 +18,26 @@ class FormTextField: CustomizableByClosure {
     content.titleLabel.anchor(top: container.safeAreaLayoutGuide.topAnchor,
                               leading: container.safeAreaLayoutGuide.leadingAnchor,
                               trailing: container.safeAreaLayoutGuide.trailingAnchor,
-                              padding: UIEdgeInsets(top: 6, left: 0, bottom: 0, right: 0))
+                              padding: UIEdgeInsets(top: Dimens.spacing6,
+                                                    left: Dimens.zero,
+                                                    bottom: Dimens.zero,
+                                                    right: Dimens.zero))
 
     content.textField.anchor(top: content.titleLabel.safeAreaLayoutGuide.bottomAnchor,
                              leading: container.safeAreaLayoutGuide.leadingAnchor,
                              trailing: container.safeAreaLayoutGuide.trailingAnchor,
-                             padding: UIEdgeInsets(top: 6, left: 0, bottom: 0, right: 0))
+                             padding: UIEdgeInsets(top: Dimens.spacing10,
+                                                   left: Dimens.zero,
+                                                   bottom: Dimens.zero,
+                                                   right: Dimens.zero))
 
     content.bottonLine.anchor(top: content.textField.safeAreaLayoutGuide.bottomAnchor,
                               leading: container.safeAreaLayoutGuide.leadingAnchor,
                               bottom: container.safeAreaLayoutGuide.bottomAnchor,
                               trailing: container.safeAreaLayoutGuide.trailingAnchor,
-                              padding: UIEdgeInsets(top: 2, left: 0, bottom: 0, right: 0))
+                              padding: UIEdgeInsets(top: Dimens.spacing2,
+                                                    left: Dimens.zero,
+                                                    bottom: Dimens.zero,
+                                                    right: Dimens.zero))
   }
 }

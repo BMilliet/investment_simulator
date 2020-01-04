@@ -5,7 +5,7 @@ class FormView: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.backgroundColor = .white
+    view.backgroundColor = Colors.whiteColor
 
     let box = formTextField.build()
 
@@ -16,7 +16,7 @@ class FormView: UIViewController {
     box.anchor(top: view.safeAreaLayoutGuide.topAnchor,
                leading: view.safeAreaLayoutGuide.leadingAnchor,
                trailing: view.safeAreaLayoutGuide.trailingAnchor,
-               padding: UIEdgeInsets(top: 20, left: 10, bottom: -100, right: -10))
+               padding: UIEdgeInsets(top: 20, left: 16, bottom: -100, right: -16))
 
   }
 }
