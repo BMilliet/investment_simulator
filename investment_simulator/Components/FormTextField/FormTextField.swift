@@ -1,7 +1,7 @@
 import UIKit
 
 class FormTextField: CustomizableByClosure {
-  private var content = FormTextFieldUIContent()
+  private var content = FormTextFieldUIContent(title: "Quanto voce gostaria de aplicar?*", placeHolder: "R$")
 
   func build() -> UIView {
     setupConstraints()

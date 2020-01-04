@@ -1,9 +1,16 @@
 import UIKit
 
 struct FormTextFieldUIContent: CustomizableByClosure {
+  let title: String
+  let placeHolder: String
+
+  init(title: String, placeHolder: String) {
+    self.title = title
+    self.placeHolder = placeHolder
+  }
+
   lazy var titleLabel = customInit(UILabel()) { label in
-    //label.emptyText()
-    label.text = "qual a data de vencimento do investimento?*"
+    label.text = title
     label.numberOfLines = 1
     label.textAlignment = .center
     label.font = UIFont.systemFont(ofSize: Dimens.fontSmall)
@@ -16,7 +23,7 @@ struct FormTextFieldUIContent: CustomizableByClosure {
     textField.borderStyle = .none
     textField.textAlignment = .center
     textField.textColor = Colors.mediumLightColor
-    textField.attributedPlaceholder = NSAttributedString(string: "dia/mes/ano",
+    textField.attributedPlaceholder = NSAttributedString(string: placeHolder,
                                                          attributes: [
                                                           .foregroundColor: Colors.mediumLightColor,
                                                           .font: UIFont.systemFont(ofSize: Dimens.fontLarge)])
