@@ -1,13 +1,8 @@
 import UIKit
 
 struct FormTextFieldUIContent: CustomizableByClosure {
-  let title: String
-  let placeHolder: String
-
-  init(title: String, placeHolder: String) {
-    self.title = title
-    self.placeHolder = placeHolder
-  }
+  var title: String = ""
+  var placeHolder: String = ""
 
   lazy var titleLabel = customInit(UILabel()) { label in
     label.text = title

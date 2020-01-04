@@ -32,6 +32,7 @@
 		15DF499323C0BEE100428090 /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DF499223C0BEE100428090 /* FormTextField.swift */; };
 		15DF499623C0CB5B00428090 /* Dimens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DF499523C0CB5B00428090 /* Dimens.swift */; };
 		15DF499823C0CB8800428090 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DF499723C0CB8800428090 /* Colors.swift */; };
+		15DF499A23C0DD8D00428090 /* FormViewUIContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DF499923C0DD8D00428090 /* FormViewUIContent.swift */; };
 		15E7D12A23BFD16500B709AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E7D12923BFD16500B709AE /* AppDelegate.swift */; };
 		15E7D12C23BFD16500B709AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E7D12B23BFD16500B709AE /* SceneDelegate.swift */; };
 		15E7D12E23BFD16500B709AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E7D12D23BFD16500B709AE /* ViewController.swift */; };
@@ -78,6 +79,7 @@
 		15DF499223C0BEE100428090 /* FormTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
 		15DF499523C0CB5B00428090 /* Dimens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimens.swift; sourceTree = "<group>"; };
 		15DF499723C0CB8800428090 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		15DF499923C0DD8D00428090 /* FormViewUIContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewUIContent.swift; sourceTree = "<group>"; };
 		15E7D12623BFD16500B709AE /* investment_simulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = investment_simulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15E7D12923BFD16500B709AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15E7D12B23BFD16500B709AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				15DF498523C0B8CA00428090 /* FormView.swift */,
+				15DF499923C0DD8D00428090 /* FormViewUIContent.swift */,
 			);
 			path = SubmitForm;
 			sourceTree = "<group>";
@@ -498,6 +501,7 @@
 				154689B923BFE20500F32353 /* ReachabilityHandler.swift in Sources */,
 				15DF498923C0B92200428090 /* CustomizableByClosure.swift in Sources */,
 				15E7D12A23BFD16500B709AE /* AppDelegate.swift in Sources */,
+				15DF499A23C0DD8D00428090 /* FormViewUIContent.swift in Sources */,
 				15DF499323C0BEE100428090 /* FormTextField.swift in Sources */,
 				15DF499623C0CB5B00428090 /* Dimens.swift in Sources */,
 				15DF499123C0BD7800428090 /* UILabel.swift in Sources */,
