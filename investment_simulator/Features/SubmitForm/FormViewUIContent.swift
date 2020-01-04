@@ -18,4 +18,8 @@ struct FormViewUIContent {
                                       placeHolder: AppStrings.percentHolder)
     return formTextField.build()
   }
+
+  static func submitButton() -> UIView {
+    return CustomButton().build(title: AppStrings.simulate)
+  }
 }

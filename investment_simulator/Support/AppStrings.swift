@@ -5,4 +5,5 @@ struct AppStrings {
   static let dateFormat = "dia/mês/ano"
   static let cdiPercent = "Qual o percentual do CDI do investimento?*"
   static let percentHolder = "100%"
+  static let simulate = "Simular"
 }

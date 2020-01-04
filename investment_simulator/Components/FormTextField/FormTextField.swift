@@ -13,10 +13,11 @@ class FormTextField: CustomizableByClosure {
     return container
   }
 
-  private lazy var container = customInit(UIView()) { container in
+  lazy var container = customInit(UIView()) { container in
     container.addSubview(content.titleLabel)
     container.addSubview(content.textField)
     container.addSubview(content.bottonLine)
+    container.backgroundColor = .clear
     container.size(height: Dimens.size80)
   }
 
@@ -44,6 +45,6 @@ class FormTextField: CustomizableByClosure {
                               padding: UIEdgeInsets(top: Dimens.spacing2,
                                                     left: Dimens.zero,
                                                     bottom: Dimens.zero,
-                                                    right: Dimens.zero))
+                                                    right: -Dimens.zero))
   }
 }
