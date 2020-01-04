@@ -2,14 +2,14 @@ import UIKit
 import RxSwift
 
 class ViewController: UIViewController {
+
+  private let disposeBag = DisposeBag()
+
   override func viewDidLoad() {
     super.viewDidLoad()
     self.view.backgroundColor = .cyan
 
-    let disposeBag = DisposeBag()
-
-    guard let url = URL(string: "https://api-simulator-calc.easynvest.com.br/calculator/simulate?investedAmount=32323.0 &index=CDI&rate=100&isTaxFree=false&maturityDate=2023-03-03") else {
-
+    guard let url = ApiRouter().getSimulationEndPoint(investedAmountValue: 32323.0, rateValue: 100, maturityDateValue: "2023-03-03") else {
       print("url nil")
       return
     }
