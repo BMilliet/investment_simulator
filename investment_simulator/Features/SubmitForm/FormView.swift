@@ -1,6 +1,10 @@
 import UIKit
+import RxSwift
+import RxCocoa
 
 class FormView: UIViewController, CustomizableByClosure {
+  private let model = FormViewModel()
+  private let disposeBag = DisposeBag()
   private let valueAmountForm = FormViewUIContent.valueAmountForm()
   private let cdiPercentForm = FormViewUIContent.CDIPercentForm()
   private let dateForm = FormViewUIContent.dateForm()
@@ -13,6 +17,14 @@ class FormView: UIViewController, CustomizableByClosure {
     addUIComponents()
     setupScrollConstraints()
     setupStackConstraints()
+    bindToModel()
+  }
+
+  private func bindToModel() {
+    _ = valueAmountForm.getTextField().rx.text.map { $0 ?? "" }.bind(to: model.valueAmountText)
+    _ = cdiPercentForm.getTextField().rx.text.map { $0 ?? "" }.bind(to: model.cdiPercentText)
+    _ = dateForm.getTextField().rx.text.map { $0 ?? "" }.bind(to: model.dateText)
+    _ = submitButton.rx.tap.bind { [weak self] in self?.model.buttonAction }.disposed(by: disposeBag)
   }
 
   lazy var stack = customInit(UIStackView()) { stack in
@@ -28,9 +40,9 @@ class FormView: UIViewController, CustomizableByClosure {
   private func addUIComponents() {
     view.addSubview(scrollView)
     scrollView.addSubview(stack)
-    stack.addArrangedSubview(valueAmountForm)
-    stack.addArrangedSubview(dateForm)
-    stack.addArrangedSubview(cdiPercentForm)
+    stack.addArrangedSubview(valueAmountForm.build())
+    stack.addArrangedSubview(dateForm.build())
+    stack.addArrangedSubview(cdiPercentForm.build())
     stack.addArrangedSubview(spacer)
     stack.addArrangedSubview(submitButton)
   }

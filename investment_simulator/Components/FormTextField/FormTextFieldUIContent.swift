@@ -18,6 +18,7 @@ struct FormTextFieldUIContent: CustomizableByClosure {
     textField.borderStyle = .none
     textField.textAlignment = .center
     textField.textColor = Colors.mediumLightColor
+    textField.keyboardType = .numberPad
     textField.attributedPlaceholder = NSAttributedString(string: placeHolder,
                                                          attributes: [
                                                           .foregroundColor: Colors.mediumLightColor,

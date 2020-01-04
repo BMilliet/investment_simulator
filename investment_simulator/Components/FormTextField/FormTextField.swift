@@ -13,6 +13,10 @@ class FormTextField: CustomizableByClosure {
     return container
   }
 
+  func getTextField() -> UITextField {
+    return content.textField
+  }
+
   lazy var container = customInit(UIView()) { container in
     container.addSubview(content.titleLabel)
     container.addSubview(content.textField)
