@@ -1,7 +1,7 @@
 import UIKit
 
 class PercentFieldModel: UIViewController, UITextFieldDelegate {
-    private let formatter = MaskFormatter()
+  private let formatter = MaskFormatter()
 
   func textField(_ textField: UITextField,
                  shouldChangeCharactersIn range: NSRange,

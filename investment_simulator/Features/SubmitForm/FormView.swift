@@ -19,19 +19,11 @@ class FormView: UIViewController, UITextFieldDelegate, CustomizableByClosure {
     super.viewDidLoad()
     view.backgroundColor = Colors.whiteColor
     addUIComponents()
+    addGesture()
     setupScrollConstraints()
     setupStackConstraints()
     setTextFieldModels()
     bindToModel()
-  }
-
-  private func bindToModel() {
-    _ = valueAmountForm.getTextField().rx.text.map { $0 ?? "" }.bind(to: model.valueAmountText)
-    _ = cdiPercentForm.getTextField().rx.text.map { $0 ?? "" }.bind(to: model.cdiPercentText)
-    _ = dateForm.getTextField().rx.text.map { $0 ?? "" }.bind(to: model.dateText)
-    _ = model.errorMessage.bind(to: errorLabel.rx.text)
-    _ = model.errorLabelHidden.bind(to: errorLabel.rx.isHidden)
-    _ = submitButton.rx.tap.bind { [weak self] in self?.model.buttonAction }.disposed(by: disposeBag)
   }
 
   lazy var stack = customInit(UIStackView()) { stack in
@@ -42,6 +34,21 @@ class FormView: UIViewController, UITextFieldDelegate, CustomizableByClosure {
   lazy var spacer = customInit(UIView()) { spacer in
     spacer.backgroundColor = .clear
     spacer.size(height: Dimens.size20)
+  }
+
+  private func bindToModel() {
+    _ = valueAmountForm.getTextField().rx.text.orEmpty.bind(to: model.valueAmountText)
+    _ = cdiPercentForm.getTextField().rx.text.orEmpty.bind(to: model.cdiPercentText)
+    _ = dateForm.getTextField().rx.text.orEmpty.bind(to: model.dateText)
+    _ = model.errorMessage.bind(to: errorLabel.rx.text)
+    _ = model.errorLabelHidden.bind(to: errorLabel.rx.isHidden)
+    _ = submitButton.rx.tap.bind { [weak self] in self?.model.buttonAction }.disposed(by: disposeBag)
+  }
+
+  private func addGesture() {
+    let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+    tap.cancelsTouchesInView = false
+    view.addGestureRecognizer(tap)
   }
 
   private func setTextFieldModels() {

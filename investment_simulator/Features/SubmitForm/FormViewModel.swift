@@ -9,24 +9,26 @@ class FormViewModel {
   var errorLabelHidden = BehaviorRelay<Bool>(value: true)
 
   var buttonAction: Void {
-    verifyRequest()
+    hasEmptyValues() ?
+      setEmptyValueError() :
+      validInputValueAction()
   }
 
-  private func verifyRequest() {
-    if hasEmptyValues() {
-      setEmptyValueError()
-      return
-    }
+  private func validInputValueAction() {
     hiddesErrorLabel()
     fetchRequest()
   }
 
   private func hasEmptyValues() -> Bool {
-    return [valueAmountText.value, cdiPercentText.value, dateText.value].contains { $0 == "" }
+    return [valueAmountText.value,
+            cdiPercentText.value,
+            dateText.value].contains { $0 == "" }
   }
 
   private func fetchRequest() {
-    print("connect!!")
+    print(valueAmountText.value)
+    print(cdiPercentText.value)
+    print(dateText.value)
   }
 
   private func hiddesErrorLabel() {
