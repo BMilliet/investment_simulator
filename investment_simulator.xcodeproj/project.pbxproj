@@ -36,10 +36,17 @@
 		15E6F5D023C0EE25004EB8CC /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E6F5CF23C0EE25004EB8CC /* AppStrings.swift */; };
 		15E6F5D223C11947004EB8CC /* TestStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E6F5D123C11947004EB8CC /* TestStuff.swift */; };
 		15E6F5D523C11BA0004EB8CC /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E6F5D423C11BA0004EB8CC /* CustomButton.swift */; };
+		15E6F5DB23C127A2004EB8CC /* FormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E6F5DA23C127A2004EB8CC /* FormViewModel.swift */; };
+		15E6F5DD23C12CF2004EB8CC /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E6F5DC23C12CF2004EB8CC /* UIStackView.swift */; };
+		15E6F5E323C1300A004EB8CC /* ErrorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E6F5E223C1300A004EB8CC /* ErrorLabel.swift */; };
 		15E7D12A23BFD16500B709AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E7D12923BFD16500B709AE /* AppDelegate.swift */; };
 		15E7D12C23BFD16500B709AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E7D12B23BFD16500B709AE /* SceneDelegate.swift */; };
 		15E7D13323BFD16600B709AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15E7D13223BFD16600B709AE /* Assets.xcassets */; };
 		15E7D13623BFD16600B709AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15E7D13423BFD16600B709AE /* LaunchScreen.storyboard */; };
+		15E9364D23C17FF400743DF7 /* MaskFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E9364C23C17FF400743DF7 /* MaskFormatter.swift */; };
+		15E9365023C1814400743DF7 /* DateFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E9364F23C1814400743DF7 /* DateFieldModel.swift */; };
+		15E9365223C181C900743DF7 /* PercentFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E9365123C181C900743DF7 /* PercentFieldModel.swift */; };
+		15E9365423C1867000743DF7 /* AmountFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E9365323C1867000743DF7 /* AmountFieldModel.swift */; };
 		C013F0DEE3BE047C9CC35CAD /* libPods-investment_simulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8DF0A538C274ED1FF2E8F0 /* libPods-investment_simulator.a */; };
 		F13BDE838BA75F0B47C0BE95 /* libPods-investment_simulatorTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C96C8F6F6E6DA8C162740B5 /* libPods-investment_simulatorTests.a */; };
 /* End PBXBuildFile section */
@@ -85,6 +92,9 @@
 		15E6F5CF23C0EE25004EB8CC /* AppStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStrings.swift; sourceTree = "<group>"; };
 		15E6F5D123C11947004EB8CC /* TestStuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStuff.swift; sourceTree = "<group>"; };
 		15E6F5D423C11BA0004EB8CC /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		15E6F5DA23C127A2004EB8CC /* FormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewModel.swift; sourceTree = "<group>"; };
+		15E6F5DC23C12CF2004EB8CC /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
+		15E6F5E223C1300A004EB8CC /* ErrorLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorLabel.swift; sourceTree = "<group>"; };
 		15E7D12623BFD16500B709AE /* investment_simulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = investment_simulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15E7D12923BFD16500B709AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15E7D12B23BFD16500B709AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +103,10 @@
 		15E7D13723BFD16600B709AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15E7D13C23BFD16600B709AE /* investment_simulatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = investment_simulatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15E7D14223BFD16600B709AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15E9364C23C17FF400743DF7 /* MaskFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskFormatter.swift; sourceTree = "<group>"; };
+		15E9364F23C1814400743DF7 /* DateFieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFieldModel.swift; sourceTree = "<group>"; };
+		15E9365123C181C900743DF7 /* PercentFieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentFieldModel.swift; sourceTree = "<group>"; };
+		15E9365323C1867000743DF7 /* AmountFieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountFieldModel.swift; sourceTree = "<group>"; };
 		1DA00CE5336A34C574694F03 /* Pods-investment_simulator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-investment_simulator.debug.xcconfig"; path = "Target Support Files/Pods-investment_simulator/Pods-investment_simulator.debug.xcconfig"; sourceTree = "<group>"; };
 		4C96C8F6F6E6DA8C162740B5 /* libPods-investment_simulatorTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-investment_simulatorTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		655DA70FD1681FA1AA42B20C /* Pods-investment_simulator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-investment_simulator.release.xcconfig"; path = "Target Support Files/Pods-investment_simulator/Pods-investment_simulator.release.xcconfig"; sourceTree = "<group>"; };
@@ -174,6 +188,7 @@
 				154689BD23BFE4E600F32353 /* URL.swift */,
 				154689BF23BFE51500F32353 /* UIView.swift */,
 				15DF499023C0BD7800428090 /* UILabel.swift */,
+				15E6F5DC23C12CF2004EB8CC /* UIStackView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -214,8 +229,10 @@
 		15DF498423C0B88A00428090 /* SubmitForm */ = {
 			isa = PBXGroup;
 			children = (
-				15DF498523C0B8CA00428090 /* FormView.swift */,
+				15E9364E23C1812400743DF7 /* TextFieldModels */,
 				15DF499923C0DD8D00428090 /* FormViewUIContent.swift */,
+				15DF498523C0B8CA00428090 /* FormView.swift */,
+				15E6F5DA23C127A2004EB8CC /* FormViewModel.swift */,
 			);
 			path = SubmitForm;
 			sourceTree = "<group>";
@@ -231,6 +248,7 @@
 		15DF498C23C0BC3500428090 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				15E6F5E123C12FF7004EB8CC /* ErrorLabel */,
 				15E6F5D323C11B8A004EB8CC /* CustomButton */,
 				15DF498D23C0BC4700428090 /* FormTextField */,
 			);
@@ -271,6 +289,14 @@
 			path = CustomButton;
 			sourceTree = "<group>";
 		};
+		15E6F5E123C12FF7004EB8CC /* ErrorLabel */ = {
+			isa = PBXGroup;
+			children = (
+				15E6F5E223C1300A004EB8CC /* ErrorLabel.swift */,
+			);
+			path = ErrorLabel;
+			sourceTree = "<group>";
+		};
 		15E7D11D23BFD16500B709AE = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +320,7 @@
 		15E7D12823BFD16500B709AE /* investment_simulator */ = {
 			isa = PBXGroup;
 			children = (
+				15E9364B23C17FCC00743DF7 /* Helpers */,
 				15E6F5CE23C0EE12004EB8CC /* Support */,
 				15DF499423C0CB4900428090 /* Style */,
 				15DF498C23C0BC3500428090 /* Components */,
@@ -323,6 +350,24 @@
 				15DF498A23C0B94500428090 /* CustomizableByClosureTest.swift */,
 			);
 			path = investment_simulatorTests;
+			sourceTree = "<group>";
+		};
+		15E9364B23C17FCC00743DF7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				15E9364C23C17FF400743DF7 /* MaskFormatter.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		15E9364E23C1812400743DF7 /* TextFieldModels */ = {
+			isa = PBXGroup;
+			children = (
+				15E9364F23C1814400743DF7 /* DateFieldModel.swift */,
+				15E9365123C181C900743DF7 /* PercentFieldModel.swift */,
+				15E9365323C1867000743DF7 /* AmountFieldModel.swift */,
+			);
+			path = TextFieldModels;
 			sourceTree = "<group>";
 		};
 		905CD1D9A9872818898031CC /* Pods */ = {
@@ -528,14 +573,21 @@
 				15DF499323C0BEE100428090 /* FormTextField.swift in Sources */,
 				15DF499623C0CB5B00428090 /* Dimens.swift in Sources */,
 				15DF499123C0BD7800428090 /* UILabel.swift in Sources */,
+				15E9365023C1814400743DF7 /* DateFieldModel.swift in Sources */,
 				15DF499823C0CB8800428090 /* Colors.swift in Sources */,
+				15E6F5E323C1300A004EB8CC /* ErrorLabel.swift in Sources */,
 				15E7D12C23BFD16500B709AE /* SceneDelegate.swift in Sources */,
+				15E9365223C181C900743DF7 /* PercentFieldModel.swift in Sources */,
+				15E9365423C1867000743DF7 /* AmountFieldModel.swift in Sources */,
 				154689C423BFE8EC00F32353 /* InvestmentParameter.swift in Sources */,
 				154689AA23BFE10100F32353 /* ApiError.swift in Sources */,
 				15E6F5D023C0EE25004EB8CC /* AppStrings.swift in Sources */,
 				154689C023BFE51500F32353 /* UIView.swift in Sources */,
+				15E6F5DB23C127A2004EB8CC /* FormViewModel.swift in Sources */,
 				154689B123BFE17C00F32353 /* RequestResult.swift in Sources */,
+				15E6F5DD23C12CF2004EB8CC /* UIStackView.swift in Sources */,
 				154689A823BFE0E400F32353 /* ApiClient.swift in Sources */,
+				15E9364D23C17FF400743DF7 /* MaskFormatter.swift in Sources */,
 				15DF498623C0B8CA00428090 /* FormView.swift in Sources */,
 				154689BB23BFE22700F32353 /* Repository.swift in Sources */,
 				15DF498F23C0BC9800428090 /* FormTextFieldUIContent.swift in Sources */,

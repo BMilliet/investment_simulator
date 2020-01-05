@@ -10,6 +10,9 @@ struct FormTextFieldUIContent: CustomizableByClosure {
     label.textAlignment = .center
     label.font = UIFont.systemFont(ofSize: Dimens.fontSmall)
     label.adjustsFontSizeToFitWidth = true
+    label.isAccessibilityElement = true
+    label.accessibilityTraits = .staticText
+    label.accessibilityLanguage = AppStrings.acceptedLanguage
     label.minimumScaleFactor = Dimens.minimumTextScale
     label.textColor = Colors.mediumLightColor
   }
@@ -18,6 +21,10 @@ struct FormTextFieldUIContent: CustomizableByClosure {
     textField.borderStyle = .none
     textField.textAlignment = .center
     textField.textColor = Colors.mediumLightColor
+    textField.keyboardType = .numberPad
+    textField.isAccessibilityElement = true
+    textField.accessibilityTraits = .selected
+    textField.accessibilityLanguage = AppStrings.acceptedLanguage
     textField.attributedPlaceholder = NSAttributedString(string: placeHolder,
                                                          attributes: [
                                                           .foregroundColor: Colors.mediumLightColor,

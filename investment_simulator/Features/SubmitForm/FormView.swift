@@ -1,18 +1,30 @@
 import UIKit
+import RxSwift
+import RxCocoa
 
-class FormView: UIViewController, CustomizableByClosure {
+class FormView: UIViewController, UITextFieldDelegate, CustomizableByClosure {
+  private let model = FormViewModel()
+  private let disposeBag = DisposeBag()
   private let valueAmountForm = FormViewUIContent.valueAmountForm()
   private let cdiPercentForm = FormViewUIContent.CDIPercentForm()
   private let dateForm = FormViewUIContent.dateForm()
   private let submitButton = FormViewUIContent.submitButton()
+  private let errorLabel = FormViewUIContent.errorLabel()
+  private let dateFieldModel = DateFieldModel()
+  private let percentFieldModel = PercentFieldModel()
+  private let amountFieldModel = AmountFieldModel()
   private let scrollView = UIScrollView()
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.backgroundColor = Colors.whiteColor
+    setBackgroundColors()
     addUIComponents()
+    addGesture()
+    setAccessibilityValues()
     setupScrollConstraints()
     setupStackConstraints()
+    setTextFieldModels()
+    bindToModel()
   }
 
   lazy var stack = customInit(UIStackView()) { stack in
@@ -25,14 +37,46 @@ class FormView: UIViewController, CustomizableByClosure {
     spacer.size(height: Dimens.size20)
   }
 
+  private func bindToModel() {
+    _ = valueAmountForm.getTextField().rx.text.orEmpty.bind(to: model.valueAmountText)
+    _ = cdiPercentForm.getTextField().rx.text.orEmpty.bind(to: model.cdiPercentText)
+    _ = dateForm.getTextField().rx.text.orEmpty.bind(to: model.dateText)
+    _ = model.errorMessage.bind(to: errorLabel.rx.text)
+    _ = model.errorLabelHidden.bind(to: errorLabel.rx.isHidden)
+    _ = submitButton.rx.tap.bind { [weak self] in self?.model.buttonAction }.disposed(by: disposeBag)
+  }
+
+  private func addGesture() {
+    let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+    tap.cancelsTouchesInView = false
+    view.addGestureRecognizer(tap)
+  }
+
+  private func setAccessibilityValues() {
+    valueAmountForm.setAccessibility()
+    cdiPercentForm.setAccessibility()
+    dateForm.setAccessibility()
+  }
+
+  private func setTextFieldModels() {
+    dateForm.getTextField().delegate = dateFieldModel
+    valueAmountForm.getTextField().delegate = amountFieldModel
+    cdiPercentForm.getTextField().delegate = percentFieldModel
+  }
+
   private func addUIComponents() {
     view.addSubview(scrollView)
     scrollView.addSubview(stack)
-    stack.addArrangedSubview(valueAmountForm)
-    stack.addArrangedSubview(dateForm)
-    stack.addArrangedSubview(cdiPercentForm)
-    stack.addArrangedSubview(spacer)
-    stack.addArrangedSubview(submitButton)
+    stack.addArrangedSubviewArray([valueAmountForm.build(),
+                                   dateForm.build(),
+                                   cdiPercentForm.build(),
+                                   spacer,
+                                   submitButton,
+                                   errorLabel])
+  }
+
+  private func setBackgroundColors() {
+    view.backgroundColor = Colors.whiteColor
   }
 
   private func setupScrollConstraints() {
