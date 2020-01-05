@@ -28,12 +28,14 @@ class ValidatorTest: QuickSpec {
 
         let validAmount1 = "1234"
         let validAmount2 = "1234.5"
+        let validAmount3 = "1234.52944"
         let invalidAmount1 = "12.34.5"
         let invalidAmount2 = "number"
 
         it("compare values") {
           expect(validator.isValidAmount(validAmount1)).to(beTrue())
           expect(validator.isValidAmount(validAmount2)).to(beTrue())
+          expect(validator.isValidAmount(validAmount3)).to(beTrue())
           expect(validator.isValidAmount(invalidAmount1)).to(beFalse())
           expect(validator.isValidAmount(invalidAmount2)).to(beFalse())
         }

@@ -13,7 +13,7 @@ class FormViewModel {
     validator.hasEmptyValues([valueAmountText.value,
                               cdiPercentText.value,
                               dateText.value]) ?
-      setEmptyValueError() :
+      setError(AppStrings.emptyValuesError) :
       validFormatAction()
   }
 
@@ -23,9 +23,7 @@ class FormViewModel {
   }
 
   private func fetchRequest() {
-    print(valueAmountText.value)
-    print(cdiPercentText.value)
-    print(dateText.value)
+    checkForInputError()
     //navigate()
   }
 
@@ -34,9 +32,17 @@ class FormViewModel {
     errorLabelHidden.accept(true)
   }
 
-  private func setEmptyValueError() {
-    errorMessage.accept(AppStrings.emptyValuesError)
+  private func setError(_ description: String) {
+    errorMessage.accept(description)
     errorLabelHidden.accept(false)
+  }
+
+  private func checkForInputError() {
+    if !validator.isValidAmount(valueAmountText.value) { setError("amount error"); return }
+    if !validator.isValidPercentage(cdiPercentText.value) { setError("percent error"); return }
+    if !validator.isValidDate(date: dateText.value,
+                             todayDate: "05/01/2020") { setError("date error"); return }
+    hiddesErrorLabel()
   }
 
   private func navigate() {
