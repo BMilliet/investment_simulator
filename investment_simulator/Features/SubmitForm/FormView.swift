@@ -17,9 +17,10 @@ class FormView: UIViewController, UITextFieldDelegate, CustomizableByClosure {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.backgroundColor = Colors.whiteColor
+    setBackgroundColors()
     addUIComponents()
     addGesture()
+    setAccessibilityValues()
     setupScrollConstraints()
     setupStackConstraints()
     setTextFieldModels()
@@ -51,6 +52,12 @@ class FormView: UIViewController, UITextFieldDelegate, CustomizableByClosure {
     view.addGestureRecognizer(tap)
   }
 
+  private func setAccessibilityValues() {
+    valueAmountForm.setAccessibility()
+    cdiPercentForm.setAccessibility()
+    dateForm.setAccessibility()
+  }
+
   private func setTextFieldModels() {
     dateForm.getTextField().delegate = dateFieldModel
     valueAmountForm.getTextField().delegate = amountFieldModel
@@ -66,6 +73,10 @@ class FormView: UIViewController, UITextFieldDelegate, CustomizableByClosure {
                                    spacer,
                                    submitButton,
                                    errorLabel])
+  }
+
+  private func setBackgroundColors() {
+    view.backgroundColor = Colors.whiteColor
   }
 
   private func setupScrollConstraints() {

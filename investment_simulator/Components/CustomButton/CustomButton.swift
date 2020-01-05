@@ -9,6 +9,12 @@ struct CustomButton: CustomizableByClosure {
     button.sizeToFit()
     button.layer.cornerRadius = Dimens.size25
     button.setTitle(title, for: .normal)
+    button.isAccessibilityElement = true
+    button.accessibilityTraits = .button
+    button.accessibilityLanguage = AppStrings.acceptedLanguage
+    button.accessibilityHint = title
+    button.accessibilityLabel = title
+    button.accessibilityValue = title
     return button
   }
 }

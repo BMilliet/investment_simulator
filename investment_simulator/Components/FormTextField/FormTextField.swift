@@ -17,6 +17,15 @@ class FormTextField: CustomizableByClosure {
     return content.textField
   }
 
+  func setAccessibility() {
+    content.titleLabel.accessibilityHint = content.title
+    content.textField.accessibilityHint = content.placeHolder
+    content.titleLabel.accessibilityLabel = content.titleLabel.text
+    content.textField.accessibilityLabel = content.textField.text
+    content.titleLabel.accessibilityValue = content.titleLabel.text
+    content.textField.accessibilityValue = content.textField.text
+  }
+
   lazy var container = customInit(UIView()) { container in
     container.addSubview(content.titleLabel)
     container.addSubview(content.textField)

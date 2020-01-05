@@ -7,4 +7,5 @@ struct AppStrings {
   static let percentHolder = "100%"
   static let simulate = "Simular"
   static let emptyValuesError = "Por favor preencha todos os campos"
+  static let acceptedLanguage = "pt-BR"
 }
