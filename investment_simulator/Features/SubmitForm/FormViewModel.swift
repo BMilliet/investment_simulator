@@ -7,28 +7,26 @@ class FormViewModel {
   var dateText = BehaviorRelay<String>(value: "")
   var errorMessage = BehaviorRelay<String>(value: "")
   var errorLabelHidden = BehaviorRelay<Bool>(value: true)
+  private let validator = Validator()
 
   var buttonAction: Void {
-    hasEmptyValues() ?
+    validator.hasEmptyValues([valueAmountText.value,
+                              cdiPercentText.value,
+                              dateText.value]) ?
       setEmptyValueError() :
-      validInputValueAction()
+      validFormatAction()
   }
 
-  private func validInputValueAction() {
+  private func validFormatAction() {
     hiddesErrorLabel()
     fetchRequest()
-  }
-
-  private func hasEmptyValues() -> Bool {
-    return [valueAmountText.value,
-            cdiPercentText.value,
-            dateText.value].contains { $0 == "" }
   }
 
   private func fetchRequest() {
     print(valueAmountText.value)
     print(cdiPercentText.value)
     print(dateText.value)
+    //navigate()
   }
 
   private func hiddesErrorLabel() {
@@ -39,5 +37,10 @@ class FormViewModel {
   private func setEmptyValueError() {
     errorMessage.accept(AppStrings.emptyValuesError)
     errorLabelHidden.accept(false)
+  }
+
+  private func navigate() {
+    guard let rootNavigation = UIApplication.getRootNavigationController() else { return }
+    rootNavigation.pushViewController(ResultsView(), animated: true)
   }
 }

@@ -4,6 +4,7 @@ struct FormViewUIContent {
   static func valueAmountForm() -> FormTextField {
     let formTextField = FormTextField(title: AppStrings.amountToApply,
                                       placeHolder: AppStrings.currency)
+    formTextField.getTextField().keyboardType = .decimalPad
     return formTextField
   }
 
