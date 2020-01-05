@@ -14,13 +14,11 @@ struct Validator {
     return (hasValidNumberOfDots(stringValue) && inValidPercentageRange(stringValue))
   }
 
-//  func isValidDate(_ stringDate: String) -> Bool {
-//    let date = Date()
-//    let formatter = DateFormatter()
-//    formatter.dateFormat = "dd.MM.yyyy"
-//    let result = formatter.string(from: date)
-//    return true
-//  }
+  func isValidDate(date: String, todayDate: String) -> Bool {
+    guard let validDate = Date(date.convertDateInputFormat()) else { return false }
+    guard let today = Date(todayDate.convertDateInputFormat()) else { return false }
+    return validDate > today
+  }
 
   private func hasValidNumberOfDots(_ stringValue: String) -> Bool {
     return (stringValue.filter { $0 == "." }.count) < 2
@@ -32,7 +30,6 @@ struct Validator {
   }
 
   private func isNumber(_ stringValue: String) -> Bool {
-    guard let _ = Double(stringValue) else { return false }
-    return true
+    return (Double(stringValue) != nil)
   }
 }

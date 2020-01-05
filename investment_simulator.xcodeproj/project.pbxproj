@@ -28,6 +28,10 @@
 		1583A22B23C283FC00398AB3 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1583A22A23C283FC00398AB3 /* ResultsView.swift */; };
 		1583A22D23C288FE00398AB3 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1583A22C23C288FE00398AB3 /* Validator.swift */; };
 		1583A22F23C2899800398AB3 /* ValidatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1583A22E23C2899800398AB3 /* ValidatorTest.swift */; };
+		1583A23123C294DD00398AB3 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1583A23023C294DD00398AB3 /* String.swift */; };
+		1583A23323C295A100398AB3 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1583A23223C295A100398AB3 /* Date.swift */; };
+		1583A23523C2960300398AB3 /* DateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1583A23423C2960300398AB3 /* DateTest.swift */; };
+		1583A23723C297E500398AB3 /* StringTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1583A23623C297E500398AB3 /* StringTest.swift */; };
 		15DF498623C0B8CA00428090 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DF498523C0B8CA00428090 /* FormView.swift */; };
 		15DF498923C0B92200428090 /* CustomizableByClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DF498823C0B92200428090 /* CustomizableByClosure.swift */; };
 		15DF498B23C0B94500428090 /* CustomizableByClosureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DF498A23C0B94500428090 /* CustomizableByClosureTest.swift */; };
@@ -88,6 +92,10 @@
 		1583A22A23C283FC00398AB3 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 		1583A22C23C288FE00398AB3 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		1583A22E23C2899800398AB3 /* ValidatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorTest.swift; sourceTree = "<group>"; };
+		1583A23023C294DD00398AB3 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		1583A23223C295A100398AB3 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		1583A23423C2960300398AB3 /* DateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTest.swift; sourceTree = "<group>"; };
+		1583A23623C297E500398AB3 /* StringTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTest.swift; sourceTree = "<group>"; };
 		15DF498523C0B8CA00428090 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		15DF498823C0B92200428090 /* CustomizableByClosure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizableByClosure.swift; sourceTree = "<group>"; };
 		15DF498A23C0B94500428090 /* CustomizableByClosureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizableByClosureTest.swift; sourceTree = "<group>"; };
@@ -198,6 +206,8 @@
 				15DF499023C0BD7800428090 /* UILabel.swift */,
 				15E6F5DC23C12CF2004EB8CC /* UIStackView.swift */,
 				1583A22723C2835500398AB3 /* UIApplication.swift */,
+				1583A23023C294DD00398AB3 /* String.swift */,
+				1583A23223C295A100398AB3 /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -367,6 +377,8 @@
 				154689CE23BFEF1600F32353 /* ApiRouterTest.swift */,
 				15DF498A23C0B94500428090 /* CustomizableByClosureTest.swift */,
 				1583A22E23C2899800398AB3 /* ValidatorTest.swift */,
+				1583A23423C2960300398AB3 /* DateTest.swift */,
+				1583A23623C297E500398AB3 /* StringTest.swift */,
 			);
 			path = investment_simulatorTests;
 			sourceTree = "<group>";
@@ -605,6 +617,7 @@
 				15E6F5D023C0EE25004EB8CC /* AppStrings.swift in Sources */,
 				154689C023BFE51500F32353 /* UIView.swift in Sources */,
 				15E6F5DB23C127A2004EB8CC /* FormViewModel.swift in Sources */,
+				1583A23123C294DD00398AB3 /* String.swift in Sources */,
 				154689B123BFE17C00F32353 /* RequestResult.swift in Sources */,
 				1583A22D23C288FE00398AB3 /* Validator.swift in Sources */,
 				15E6F5DD23C12CF2004EB8CC /* UIStackView.swift in Sources */,
@@ -612,6 +625,7 @@
 				154689A823BFE0E400F32353 /* ApiClient.swift in Sources */,
 				15E9364D23C17FF400743DF7 /* MaskFormatter.swift in Sources */,
 				15DF498623C0B8CA00428090 /* FormView.swift in Sources */,
+				1583A23323C295A100398AB3 /* Date.swift in Sources */,
 				154689BB23BFE22700F32353 /* Repository.swift in Sources */,
 				15DF498F23C0BC9800428090 /* FormTextFieldUIContent.swift in Sources */,
 			);
@@ -622,6 +636,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				154689C823BFEE6700F32353 /* URLTest.swift in Sources */,
+				1583A23523C2960300398AB3 /* DateTest.swift in Sources */,
+				1583A23723C297E500398AB3 /* StringTest.swift in Sources */,
 				154689CF23BFEF1600F32353 /* ApiRouterTest.swift in Sources */,
 				15DF498B23C0B94500428090 /* CustomizableByClosureTest.swift in Sources */,
 				154689CA23BFEE9F00F32353 /* StatusCodeHandlerTest.swift in Sources */,

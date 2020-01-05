@@ -46,7 +46,7 @@ class ValidatorTest: QuickSpec {
         let validPercentage1 = "100.0"
         let validPercentage2 = "95.10"
         let validPercentage3 = "80"
-        let validPercentage4 = "89.9128891"
+        let validPercentage4 = "99.9128891"
         let invalidPercentage1 = "1211"
         let invalidPercentage2 = "1200.20"
         let invalidPercentage3 = "number"
@@ -59,6 +59,34 @@ class ValidatorTest: QuickSpec {
           expect(validator.isValidPercentage(invalidPercentage1)).to(beFalse())
           expect(validator.isValidPercentage(invalidPercentage2)).to(beFalse())
           expect(validator.isValidPercentage(invalidPercentage3)).to(beFalse())
+        }
+      }
+    }
+
+    describe("#isValidDate") {
+      context("check valid percentage value") {
+
+        let mockCurrentDate = "05/01/2020"
+        let validDate = "06/01/2020"
+        let invalidDate1 = "04/01/2020"
+        let invalidDate2 = "04/01/20"
+        let invalidDate3 = "00/01/2020"
+        let invalidDate4 = "06/00/2020"
+        let invalidDate5 = "06/01/0000"
+        let invalidDate6 = "06012020"
+        let invalidDate7 = "060/120/20"
+        let invalidDate8 = "date"
+
+        it("compare values") {
+          expect(validator.isValidDate(date: validDate, todayDate: mockCurrentDate)).to(beTrue())
+          expect(validator.isValidDate(date: invalidDate1, todayDate: mockCurrentDate)).to(beFalse())
+          expect(validator.isValidDate(date: invalidDate2, todayDate: mockCurrentDate)).to(beFalse())
+          expect(validator.isValidDate(date: invalidDate3, todayDate: mockCurrentDate)).to(beFalse())
+          expect(validator.isValidDate(date: invalidDate4, todayDate: mockCurrentDate)).to(beFalse())
+          expect(validator.isValidDate(date: invalidDate5, todayDate: mockCurrentDate)).to(beFalse())
+          expect(validator.isValidDate(date: invalidDate6, todayDate: mockCurrentDate)).to(beFalse())
+          expect(validator.isValidDate(date: invalidDate7, todayDate: mockCurrentDate)).to(beFalse())
+          expect(validator.isValidDate(date: invalidDate8, todayDate: mockCurrentDate)).to(beFalse())
         }
       }
     }
