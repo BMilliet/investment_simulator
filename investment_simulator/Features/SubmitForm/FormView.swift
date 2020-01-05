@@ -2,7 +2,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class FormView: UIViewController, CustomizableByClosure {
+class FormView: UIViewController, UITextFieldDelegate, CustomizableByClosure {
   private let model = FormViewModel()
   private let disposeBag = DisposeBag()
   private let valueAmountForm = FormViewUIContent.valueAmountForm()
@@ -10,6 +10,9 @@ class FormView: UIViewController, CustomizableByClosure {
   private let dateForm = FormViewUIContent.dateForm()
   private let submitButton = FormViewUIContent.submitButton()
   private let errorLabel = FormViewUIContent.errorLabel()
+  private let dateFieldModel = DateFieldModel()
+  private let percentFieldModel = PercentFieldModel()
+  private let amountFieldModel = AmountFieldModel()
   private let scrollView = UIScrollView()
 
   override func viewDidLoad() {
@@ -18,6 +21,7 @@ class FormView: UIViewController, CustomizableByClosure {
     addUIComponents()
     setupScrollConstraints()
     setupStackConstraints()
+    setTextFieldModels()
     bindToModel()
   }
 
@@ -38,6 +42,12 @@ class FormView: UIViewController, CustomizableByClosure {
   lazy var spacer = customInit(UIView()) { spacer in
     spacer.backgroundColor = .clear
     spacer.size(height: Dimens.size20)
+  }
+
+  private func setTextFieldModels() {
+    dateForm.getTextField().delegate = dateFieldModel
+    valueAmountForm.getTextField().delegate = amountFieldModel
+    cdiPercentForm.getTextField().delegate = percentFieldModel
   }
 
   private func addUIComponents() {
