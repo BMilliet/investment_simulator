@@ -1,7 +1,7 @@
 import UIKit
 
 struct CustomButton: CustomizableByClosure {
-  func build(title: String) -> UIButton {
+  static func build(title: String) -> UIButton {
     let button = UIButton()
     button.setTitleColor(Colors.whiteColor, for: .normal)
     button.backgroundColor = Colors.primaryColor

@@ -6,6 +6,10 @@ struct AppStrings {
   static let cdiPercent = "Qual o percentual do CDI do investimento?*"
   static let percentHolder = "100%"
   static let simulate = "Simular"
+  static let simulateAgain = "Simular novamente"
   static let emptyValuesError = "Por favor preencha todos os campos"
   static let acceptedLanguage = "pt-BR"
+  static let invalidDate = "Data inválida"
+  static let invalidAmout = "Valor do investimento inválido"
+  static let invalidCDI = "Valor do CDI inválido"
 }

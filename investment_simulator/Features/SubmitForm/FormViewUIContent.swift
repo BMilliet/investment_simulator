@@ -21,7 +21,7 @@ struct FormViewUIContent {
   }
 
   static func submitButton() -> UIButton {
-    return CustomButton().build(title: AppStrings.simulate)
+    return CustomButton.build(title: AppStrings.simulate)
   }
 
   static func errorLabel() -> UILabel {

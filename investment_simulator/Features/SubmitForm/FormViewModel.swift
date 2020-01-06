@@ -38,10 +38,10 @@ class FormViewModel {
   }
 
   private func checkForInputError() {
-    if !validator.isValidAmount(valueAmountText.value) { setError("amount error"); return }
-    if !validator.isValidPercentage(cdiPercentText.value) { setError("percent error"); return }
+    if !validator.isValidAmount(valueAmountText.value) { setError(AppStrings.invalidAmout); return }
+    if !validator.isValidPercentage(cdiPercentText.value) { setError(AppStrings.invalidCDI); return }
     if !validator.isValidDate(date: dateText.value,
-                             todayDate: "05/01/2020") { setError("date error"); return }
+                              todayDate: "05/01/2020") { setError(AppStrings.invalidDate); return }
     hiddesErrorLabel()
   }
 

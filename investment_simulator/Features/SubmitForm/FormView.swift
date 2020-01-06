@@ -23,18 +23,15 @@ class FormView: UIViewController, UITextFieldDelegate, CustomizableByClosure {
     setAccessibilityValues()
     setupScrollConstraints()
     setupStackConstraints()
+    setupButton()
     setTextFieldModels()
     bindToModel()
   }
 
   lazy var stack = customInit(UIStackView()) { stack in
     stack.axis = .vertical
+    stack.alignment = .center
     stack.spacing = Dimens.spacing20
-  }
-
-  lazy var spacer = customInit(UIView()) { spacer in
-    spacer.backgroundColor = .clear
-    spacer.size(height: Dimens.size20)
   }
 
   private func bindToModel() {
@@ -67,10 +64,11 @@ class FormView: UIViewController, UITextFieldDelegate, CustomizableByClosure {
   private func addUIComponents() {
     view.addSubview(scrollView)
     scrollView.addSubview(stack)
-    stack.addArrangedSubviewArray([valueAmountForm.build(),
+    stack.addArrangedSubviewArray([Spacer.build(height: Dimens.size20),
+                                   valueAmountForm.build(),
                                    dateForm.build(),
                                    cdiPercentForm.build(),
-                                   spacer,
+                                   Spacer.build(height: Dimens.size20),
                                    submitButton,
                                    errorLabel])
   }
@@ -87,13 +85,15 @@ class FormView: UIViewController, UITextFieldDelegate, CustomizableByClosure {
   }
 
   private func setupStackConstraints() {
+    stack.isLayoutMarginsRelativeArrangement = true
     stack.anchor(top: scrollView.topAnchor,
                  leading: scrollView.leadingAnchor,
                  bottom: scrollView.bottomAnchor,
-                 trailing: scrollView.trailingAnchor,
-                 padding: UIEdgeInsets(top: Dimens.spacing20,
-                                       left: Dimens.spacing16,
-                                       bottom: -Dimens.spacing20,
-                                       right: -Dimens.spacing16))
+                 trailing: scrollView.trailingAnchor)
+    stack.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
+  }
+
+  private func setupButton() {
+    submitButton.size(width: view.frame.width - Dimens.spacing32)
   }
 }

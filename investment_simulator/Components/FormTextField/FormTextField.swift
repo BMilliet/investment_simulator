@@ -39,25 +39,25 @@ class FormTextField: CustomizableByClosure {
                               leading: container.safeAreaLayoutGuide.leadingAnchor,
                               trailing: container.safeAreaLayoutGuide.trailingAnchor,
                               padding: UIEdgeInsets(top: Dimens.spacing6,
-                                                    left: Dimens.zero,
+                                                    left: Dimens.spacing16,
                                                     bottom: Dimens.zero,
-                                                    right: Dimens.zero))
+                                                    right: -Dimens.spacing16))
 
     content.textField.anchor(top: content.titleLabel.safeAreaLayoutGuide.bottomAnchor,
                              leading: container.safeAreaLayoutGuide.leadingAnchor,
                              trailing: container.safeAreaLayoutGuide.trailingAnchor,
                              padding: UIEdgeInsets(top: Dimens.spacing10,
-                                                   left: Dimens.zero,
+                                                   left: Dimens.spacing16,
                                                    bottom: Dimens.zero,
-                                                   right: Dimens.zero))
+                                                   right: -Dimens.spacing16))
 
     content.bottonLine.anchor(top: content.textField.safeAreaLayoutGuide.bottomAnchor,
                               leading: container.safeAreaLayoutGuide.leadingAnchor,
                               bottom: container.safeAreaLayoutGuide.bottomAnchor,
                               trailing: container.safeAreaLayoutGuide.trailingAnchor,
                               padding: UIEdgeInsets(top: Dimens.spacing2,
-                                                    left: Dimens.zero,
+                                                    left: Dimens.spacing16,
                                                     bottom: Dimens.zero,
-                                                    right: -Dimens.zero))
+                                                    right: -Dimens.spacing16))
   }
 }
