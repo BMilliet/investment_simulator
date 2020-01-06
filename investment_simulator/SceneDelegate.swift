@@ -8,7 +8,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
              options connectionOptions: UIScene.ConnectionOptions) {
     guard let windowScene = (scene as? UIWindowScene) else { return }
 
-    let rootView = FormView()
+    //let rootView = FormView()
+    let rootView = ResultsView()
     let rootNavigationController = UINavigationController(rootViewController: rootView)
     rootNavigationController.navigationBar.isHidden = true
 

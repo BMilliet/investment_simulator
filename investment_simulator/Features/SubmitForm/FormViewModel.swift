@@ -7,28 +7,24 @@ class FormViewModel {
   var dateText = BehaviorRelay<String>(value: "")
   var errorMessage = BehaviorRelay<String>(value: "")
   var errorLabelHidden = BehaviorRelay<Bool>(value: true)
+  private let validator = Validator()
 
   var buttonAction: Void {
-    hasEmptyValues() ?
-      setEmptyValueError() :
-      validInputValueAction()
+    validator.hasEmptyValues([valueAmountText.value,
+                              cdiPercentText.value,
+                              dateText.value]) ?
+      setError(AppStrings.emptyValuesError) :
+      validFormatAction()
   }
 
-  private func validInputValueAction() {
+  private func validFormatAction() {
     hiddesErrorLabel()
     fetchRequest()
   }
 
-  private func hasEmptyValues() -> Bool {
-    return [valueAmountText.value,
-            cdiPercentText.value,
-            dateText.value].contains { $0 == "" }
-  }
-
   private func fetchRequest() {
-    print(valueAmountText.value)
-    print(cdiPercentText.value)
-    print(dateText.value)
+    checkForInputError()
+    //navigate()
   }
 
   private func hiddesErrorLabel() {
@@ -36,8 +32,21 @@ class FormViewModel {
     errorLabelHidden.accept(true)
   }
 
-  private func setEmptyValueError() {
-    errorMessage.accept(AppStrings.emptyValuesError)
+  private func setError(_ description: String) {
+    errorMessage.accept(description)
     errorLabelHidden.accept(false)
+  }
+
+  private func checkForInputError() {
+    if !validator.isValidAmount(valueAmountText.value) { setError(AppStrings.invalidAmout); return }
+    if !validator.isValidPercentage(cdiPercentText.value) { setError(AppStrings.invalidCDI); return }
+    if !validator.isValidDate(date: dateText.value,
+                              todayDate: "05/01/2020") { setError(AppStrings.invalidDate); return }
+    hiddesErrorLabel()
+  }
+
+  private func navigate() {
+    guard let rootNavigation = UIApplication.getRootNavigationController() else { return }
+    rootNavigation.pushViewController(ResultsView(), animated: true)
   }
 }
