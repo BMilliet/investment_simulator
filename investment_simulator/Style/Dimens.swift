@@ -15,6 +15,7 @@ struct Dimens {
   static let size25 = CGFloat(25)
   static let size80 = CGFloat(80)
   static let size150 = CGFloat(150)
+  static let size240 = CGFloat(240)
   static let fontSmall = CGFloat(18)
   static let fontLarge = CGFloat(32)
   static let fontExtraLarge = CGFloat(50)

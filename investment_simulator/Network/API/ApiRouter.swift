@@ -12,13 +12,13 @@ struct ApiRouter {
   private let isTaxFree = "isTaxFree"
   private let maturityDate = "maturityDate"
 
-  func getSimulationEndPoint(investedAmountValue: Double,
-                             rateValue: Double,
+  func getSimulationEndPoint(investedAmountValue: String,
+                             rateValue: String,
                              maturityDateValue: String) -> URL? {
     return buildParams(
       URL(string: buildPath([baseUrl, calculateOption, simulationOption])),
-      investedAmountValue: String(investedAmountValue),
-      rateValue: String(rateValue),
+      investedAmountValue: investedAmountValue,
+      rateValue: rateValue,
       maturityDateValue: maturityDateValue)
   }
 

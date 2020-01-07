@@ -1,13 +1,14 @@
 import RxCocoa
 import RxSwift
 
-class FormViewModel {
+class FormViewModel: RepresenterAssembler {
   var valueAmountText = BehaviorRelay<String>(value: "")
   var cdiPercentText = BehaviorRelay<String>(value: "")
   var dateText = BehaviorRelay<String>(value: "")
   var errorMessage = BehaviorRelay<String>(value: "")
   var errorLabelHidden = BehaviorRelay<Bool>(value: true)
   private let validator = Validator()
+  private let disposeBag = DisposeBag()
 
   var buttonAction: Void {
     validator.hasEmptyValues([valueAmountText.value,
@@ -22,9 +23,18 @@ class FormViewModel {
     fetchRequest()
   }
 
+  private func validateAndDoRequest() {
+    if !hasInputError() { fetchRequest() }
+  }
+
   private func fetchRequest() {
-    checkForInputError()
-    //navigate()
+    if let url = ApiRouter().getSimulationEndPoint(investedAmountValue: valueAmountText.value,
+                                                   rateValue: cdiPercentText.value,
+                                                   maturityDateValue: dateText.value.convertDateInputFormat()) {
+      Repository(disposeBag: disposeBag).doRequest(url,
+                                                   Simulation.self,
+                                                   onSuccess, onError)
+    }
   }
 
   private func hiddesErrorLabel() {
@@ -37,16 +47,29 @@ class FormViewModel {
     errorLabelHidden.accept(false)
   }
 
-  private func checkForInputError() {
-    if !validator.isValidAmount(valueAmountText.value) { setError(AppStrings.invalidAmout); return }
-    if !validator.isValidPercentage(cdiPercentText.value) { setError(AppStrings.invalidCDI); return }
+  private func hasInputError() -> Bool {
+    if !validator.isValidAmount(valueAmountText.value) { setError(AppStrings.invalidAmout); return true }
+    if !validator.isValidPercentage(cdiPercentText.value) { setError(AppStrings.invalidCDI); return true }
     if !validator.isValidDate(date: dateText.value,
-                              todayDate: "05/01/2020") { setError(AppStrings.invalidDate); return }
+                              todayDate: "08/01/2020") { setError(AppStrings.invalidDate); return true}
     hiddesErrorLabel()
+    return false
   }
 
-  private func navigate() {
+  private func onSuccess(_ simulation: Simulation) {
+    let redemption = self.redemption(from: simulation, cdi: cdiPercentText.value)
+    let balance = self.balance(from: simulation, amount: valueAmountText.value)
+    navigate(redemption, balance)
+  }
+
+  private func onError(_ error: Error) {
+    setError(AppStrings.genericError)
+  }
+
+  private func navigate(_ redemption: RedemptionRepresenter, _ balance: BalanceRepresenter) {
     guard let rootNavigation = UIApplication.getRootNavigationController() else { return }
-    rootNavigation.pushViewController(ResultsView(), animated: true)
+    let resultsView = ResultsView(balance: ResultsViewBalanceUIContent(balance: balance),
+                                  redemption: ResultsViewRedemptionUIContent(redemption: redemption))
+    rootNavigation.pushViewController(resultsView, animated: true)
   }
 }
