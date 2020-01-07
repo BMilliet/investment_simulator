@@ -1,7 +1,7 @@
 import RxCocoa
 import RxSwift
 
-class FormViewModel {
+class FormViewModel: RepresenterAssembler {
   var valueAmountText = BehaviorRelay<String>(value: "")
   var cdiPercentText = BehaviorRelay<String>(value: "")
   var dateText = BehaviorRelay<String>(value: "")
@@ -41,11 +41,21 @@ class FormViewModel {
     if !validator.isValidAmount(valueAmountText.value) { setError(AppStrings.invalidAmout); return }
     if !validator.isValidPercentage(cdiPercentText.value) { setError(AppStrings.invalidCDI); return }
     if !validator.isValidDate(date: dateText.value,
-                              todayDate: "05/01/2020") { setError(AppStrings.invalidDate); return }
+                              todayDate: "08/01/2020") { setError(AppStrings.invalidDate); return }
     hiddesErrorLabel()
   }
 
-  private func navigate() {
+  private func onSuccess(_ simulation: Simulation) {
+    let redemption = self.redemption(from: simulation, cdi: cdiPercentText.value)
+    let balance = self.balance(from: simulation, amount: valueAmountText.value)
+    navigate(redemption, balance)
+  }
+
+  private func onError(_ error: Error) {
+    setError(AppStrings.genericError)
+  }
+
+  private func navigate(_ redemption: RedemptionRepresenter, _ balance: BalanceRepresenter) {
     guard let rootNavigation = UIApplication.getRootNavigationController() else { return }
     rootNavigation.pushViewController(ResultsView(), animated: true)
   }

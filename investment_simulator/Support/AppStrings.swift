@@ -23,4 +23,7 @@ struct AppStrings {
   static let InvestmentCDIPercentage = "Percentual do CDI do investimento"
   static let annualProfitability = "Rentabilidade anual"
   static let profitabilityInThePeriod = "Rentabilidade no período"
+  static let simulationResult = "Resultado da simulação"
+  static let totalIncomeOf = "Rendimento total de "
+  static let genericError = "Ops.. algo deu errado"
 }

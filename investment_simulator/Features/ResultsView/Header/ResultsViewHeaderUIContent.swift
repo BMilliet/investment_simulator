@@ -1,9 +1,8 @@
 import UIKit
 
 class ResultsViewHeaderUIContent: CustomizableByClosure {
-  var title: String = "Resultado da simulação"
   var amountValue: String = "R$ 1.088,69"
-  var profitValue: String = "Rendimento total de R$ 88,69"
+  private let profitValue: String = AppStrings.totalIncomeOf + "R$ 88,69"
 
   lazy var container = customInit(UIView()) { view in
     view.size(height: Dimens.size150)
@@ -27,7 +26,7 @@ class ResultsViewHeaderUIContent: CustomizableByClosure {
   }
 
   private lazy var titleLabel = customInit(UILabel()) { label in
-    label.text = title
+    label.text = AppStrings.simulationResult
     label.numberOfLines = 1
     label.textAlignment = .center
     label.font = UIFont.systemFont(ofSize: Dimens.fontSmall)

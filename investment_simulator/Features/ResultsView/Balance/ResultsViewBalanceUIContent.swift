@@ -7,6 +7,11 @@ class ResultsViewBalanceUIContent: CustomizableByClosure {
   private let title4: String = AppStrings.ironinvestment
   private let title5: String = AppStrings.netInvestmentValue
   private let titleValue = TitleValue()
+  private let balance: BalanceRepresenter
+
+  init(balance: BalanceRepresenter) {
+    self.balance = balance
+  }
 
   var amountValue: String = "R$ 1.088,69"
 
@@ -27,10 +32,17 @@ class ResultsViewBalanceUIContent: CustomizableByClosure {
     stack.axis = .vertical
     stack.distribution = .fillEqually
     stack.spacing = Dimens.spacing10
-    stack.addArrangedSubviewArray([titleValue.build(titleValue: title1, valueAmount: amountValue),
-                                   titleValue.build(titleValue: title2, valueAmount: amountValue),
-                                   titleValue.build(titleValue: title3, valueAmount: amountValue),
-                                   titleValue.build(titleValue: title4, valueAmount: amountValue),
-                                   titleValue.build(titleValue: title5, valueAmount: amountValue)])
+
+    let investedAmount = balance.getInvestedAmount()
+    let grossAmount = balance.getGrossAmount()
+    let rateProfit = balance.getRateProfit()
+    let taxesValues = balance.getIRValues()
+    let netAmount = balance.getNetAmount()
+
+    stack.addArrangedSubviewArray([titleValue.build(titleValue: title1, valueAmount: investedAmount),
+                                   titleValue.build(titleValue: title2, valueAmount: grossAmount),
+                                   titleValue.build(titleValue: title3, valueAmount: rateProfit),
+                                   titleValue.build(titleValue: title4, valueAmount: taxesValues),
+                                   titleValue.build(titleValue: title5, valueAmount: netAmount)])
   }
 }

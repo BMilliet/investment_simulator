@@ -3,7 +3,7 @@ import UIKit
 class ResultsView: UIViewController, CustomizableByClosure {
   private let submitButton = CustomButton.build(title: AppStrings.simulateAgain)
   private let header = ResultsViewHeaderUIContent()
-  private let balance = ResultsViewBalanceUIContent()
+  //private let balance = ResultsViewBalanceUIContent()
   private let redemption = ResultsViewRedemptionUIContent()
   private let scrollView = UIScrollView()
 
@@ -31,7 +31,7 @@ class ResultsView: UIViewController, CustomizableByClosure {
     scrollView.addSubview(stack)
     stack.addArrangedSubviewArray([Spacer.build(height: Dimens.size20),
                                    header.container,
-                                   balance.container,
+                                   //balance.container,
                                    redemption.container,
                                    submitButton])
   }
