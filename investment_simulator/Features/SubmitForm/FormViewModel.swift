@@ -8,6 +8,7 @@ class FormViewModel: RepresenterAssembler {
   var errorMessage = BehaviorRelay<String>(value: "")
   var errorLabelHidden = BehaviorRelay<Bool>(value: true)
   private let validator = Validator()
+  private let errorHandler = InputErrorHandler()
   private let disposeBag = DisposeBag()
 
   var buttonAction: Void {
@@ -20,7 +21,7 @@ class FormViewModel: RepresenterAssembler {
 
   private func validFormatAction() {
     hiddesErrorLabel()
-    fetchRequest()
+    validateAndDoRequest()
   }
 
   private func validateAndDoRequest() {
@@ -48,10 +49,10 @@ class FormViewModel: RepresenterAssembler {
   }
 
   private func hasInputError() -> Bool {
-    if !validator.isValidAmount(valueAmountText.value) { setError(AppStrings.invalidAmout); return true }
-    if !validator.isValidPercentage(cdiPercentText.value) { setError(AppStrings.invalidCDI); return true }
-    if !validator.isValidDate(date: dateText.value,
-                              todayDate: "08/01/2020") { setError(AppStrings.invalidDate); return true}
+    if errorHandler.hasError(valueAmountText.value,
+                             cdiPercentText.value,
+                             dateText.value,
+                             setError(_:)) { return true }
     hiddesErrorLabel()
     return false
   }

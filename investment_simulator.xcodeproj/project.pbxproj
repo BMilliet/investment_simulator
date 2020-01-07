@@ -31,6 +31,7 @@
 		15626A1B23C4AAF200A2F253 /* ValueRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15626A1A23C4AAF200A2F253 /* ValueRepresentation.swift */; };
 		15626A1D23C4AB7700A2F253 /* ValueRepresentationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15626A1C23C4AB7700A2F253 /* ValueRepresentationTest.swift */; };
 		15626A1F23C4B45300A2F253 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15626A1E23C4B45300A2F253 /* Double.swift */; };
+		15626A2123C4D00800A2F253 /* InputErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15626A2023C4D00800A2F253 /* InputErrorHandler.swift */; };
 		1583A22823C2835500398AB3 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1583A22723C2835500398AB3 /* UIApplication.swift */; };
 		1583A22B23C283FC00398AB3 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1583A22A23C283FC00398AB3 /* ResultsView.swift */; };
 		1583A22D23C288FE00398AB3 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1583A22C23C288FE00398AB3 /* Validator.swift */; };
@@ -106,6 +107,7 @@
 		15626A1A23C4AAF200A2F253 /* ValueRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueRepresentation.swift; sourceTree = "<group>"; };
 		15626A1C23C4AB7700A2F253 /* ValueRepresentationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueRepresentationTest.swift; sourceTree = "<group>"; };
 		15626A1E23C4B45300A2F253 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		15626A2023C4D00800A2F253 /* InputErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputErrorHandler.swift; sourceTree = "<group>"; };
 		1583A22723C2835500398AB3 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		1583A22A23C283FC00398AB3 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 		1583A22C23C288FE00398AB3 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
@@ -469,6 +471,7 @@
 				15E9364C23C17FF400743DF7 /* MaskFormatter.swift */,
 				1583A22C23C288FE00398AB3 /* Validator.swift */,
 				15626A1A23C4AAF200A2F253 /* ValueRepresentation.swift */,
+				15626A2023C4D00800A2F253 /* InputErrorHandler.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -682,6 +685,7 @@
 				15626A1B23C4AAF200A2F253 /* ValueRepresentation.swift in Sources */,
 				154689AC23BFE11F00F32353 /* ApiRouter.swift in Sources */,
 				154689BE23BFE4E600F32353 /* URL.swift in Sources */,
+				15626A2123C4D00800A2F253 /* InputErrorHandler.swift in Sources */,
 				154689B923BFE20500F32353 /* ReachabilityHandler.swift in Sources */,
 				15DF498923C0B92200428090 /* CustomizableByClosure.swift in Sources */,
 				15E7D12A23BFD16500B709AE /* AppDelegate.swift in Sources */,
