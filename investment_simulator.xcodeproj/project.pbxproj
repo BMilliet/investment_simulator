@@ -30,6 +30,7 @@
 		15626A1923C4A2A100A2F253 /* RepresenterAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15626A1823C4A2A100A2F253 /* RepresenterAssembler.swift */; };
 		15626A1B23C4AAF200A2F253 /* ValueRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15626A1A23C4AAF200A2F253 /* ValueRepresentation.swift */; };
 		15626A1D23C4AB7700A2F253 /* ValueRepresentationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15626A1C23C4AB7700A2F253 /* ValueRepresentationTest.swift */; };
+		15626A1F23C4B45300A2F253 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15626A1E23C4B45300A2F253 /* Double.swift */; };
 		1583A22823C2835500398AB3 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1583A22723C2835500398AB3 /* UIApplication.swift */; };
 		1583A22B23C283FC00398AB3 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1583A22A23C283FC00398AB3 /* ResultsView.swift */; };
 		1583A22D23C288FE00398AB3 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1583A22C23C288FE00398AB3 /* Validator.swift */; };
@@ -104,6 +105,7 @@
 		15626A1823C4A2A100A2F253 /* RepresenterAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepresenterAssembler.swift; sourceTree = "<group>"; };
 		15626A1A23C4AAF200A2F253 /* ValueRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueRepresentation.swift; sourceTree = "<group>"; };
 		15626A1C23C4AB7700A2F253 /* ValueRepresentationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueRepresentationTest.swift; sourceTree = "<group>"; };
+		15626A1E23C4B45300A2F253 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		1583A22723C2835500398AB3 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		1583A22A23C283FC00398AB3 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 		1583A22C23C288FE00398AB3 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				1583A22723C2835500398AB3 /* UIApplication.swift */,
 				1583A23023C294DD00398AB3 /* String.swift */,
 				1583A23223C295A100398AB3 /* Date.swift */,
+				15626A1E23C4B45300A2F253 /* Double.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -702,6 +705,7 @@
 				154689C023BFE51500F32353 /* UIView.swift in Sources */,
 				15E6F5DB23C127A2004EB8CC /* FormViewModel.swift in Sources */,
 				1583A23123C294DD00398AB3 /* String.swift in Sources */,
+				15626A1F23C4B45300A2F253 /* Double.swift in Sources */,
 				154689B123BFE17C00F32353 /* RequestResult.swift in Sources */,
 				1583A22D23C288FE00398AB3 /* Validator.swift in Sources */,
 				15E6F5DD23C12CF2004EB8CC /* UIStackView.swift in Sources */,

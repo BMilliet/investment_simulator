@@ -29,5 +29,21 @@ class ValueRepresentationTest: QuickSpec {
         }
       }
     }
+
+    describe("#mixedTaxesValue") {
+      context("convert taxes amount and percentage to string representation") {
+
+        let subject1 = representation.mixedTaxesValue(15.52453, 17.50)
+        let expected1 = "R$ 15,52(17,5%)"
+
+        let subject2 = representation.mixedTaxesValue(1235.52453, 123.3442)
+        let expected2 = "R$ 1.235,52(123,34%)"
+
+        it("check values") {
+          expect(subject1).to(equal(expected1))
+          expect(subject2).to(equal(expected2))
+        }
+      }
+    }
   }
 }

@@ -1,10 +1,11 @@
 struct BalanceRepresenter {
-  private let investedAmount: String // front
-  private let grossAmount: Double //
-  private let rateProfit: Double //
-  private let taxesAmount: Double // juntos
-  private let taxesRate: Double // juntos
-  private let netAmount: Double //
+  private let helper = ValueRepresentation()
+  private let investedAmount: String
+  private let grossAmount: Double
+  private let rateProfit: Double
+  private let taxesAmount: Double
+  private let taxesRate: Double
+  private let netAmount: Double
 
   init(investedAmount: String,
        grossAmount: Double,
@@ -21,26 +22,23 @@ struct BalanceRepresenter {
   }
 
   func getInvestedAmount() -> String {
-    return AppStrings.currency + " " + investedAmount.replacingOccurrences(of: ".", with: ",")
+    guard let value = Double(investedAmount) else { return AppStrings.genericError }
+    return helper.currency(value)
   }
 
   func getGrossAmount() -> String {
-    //return AppStrings.currency + " " + grossAmount.replacingOccurrences(of: ".", with: ",")
-    return ""
+    return helper.currency(grossAmount)
   }
 
   func getRateProfit() -> String {
-    //return AppStrings.currency + " " + rateProfit.replacingOccurrences(of: ".", with: ",")
-    return ""
+    return helper.currency(rateProfit)
   }
 
   func getIRValues() -> String {
-    //return AppStrings.currency + " " + taxesAmount.replacingOccurrences(of: ".", with: ",") + "(\(taxesRate + "%"))"
-    return ""
+    return helper.mixedTaxesValue(taxesAmount, taxesRate)
   }
 
   func getNetAmount() -> String {
-   // return AppStrings.currency + " " + netAmount.replacingOccurrences(of: ".", with: ",")
-    return ""
+    return helper.currency(netAmount)
   }
 }
