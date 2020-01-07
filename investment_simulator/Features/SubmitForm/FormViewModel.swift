@@ -69,7 +69,9 @@ class FormViewModel: RepresenterAssembler {
   private func navigate(_ redemption: RedemptionRepresenter, _ balance: BalanceRepresenter) {
     guard let rootNavigation = UIApplication.getRootNavigationController() else { return }
     let resultsView = ResultsView(balance: ResultsViewBalanceUIContent(balance: balance),
-                                  redemption: ResultsViewRedemptionUIContent(redemption: redemption))
+                                  redemption: ResultsViewRedemptionUIContent(redemption: redemption),
+                                  amount: balance.getGrossAmount(),
+                                  profit: redemption.getAnnualGrossRateProfit())
     rootNavigation.pushViewController(resultsView, animated: true)
   }
 }

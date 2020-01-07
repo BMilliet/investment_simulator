@@ -8,9 +8,13 @@ class ResultsView: UIViewController, CustomizableByClosure {
   private let scrollView = UIScrollView()
 
   init(balance: ResultsViewBalanceUIContent,
-       redemption: ResultsViewRedemptionUIContent) {
+       redemption: ResultsViewRedemptionUIContent,
+       amount: String,
+       profit: String) {
       self.balance = balance
       self.redemption = redemption
+      header.amountValue = amount
+      header.profitValue = profit
       super.init(nibName: nil, bundle: nil)
   }
 
@@ -65,5 +69,10 @@ class ResultsView: UIViewController, CustomizableByClosure {
 
   private func setupButton() {
     submitButton.size(width: view.frame.width - Dimens.spacing32)
+    submitButton.addTarget(self, action: #selector(popView), for: .touchUpInside)
+  }
+
+  @objc private func popView() {
+    self.navigationController?.popViewController(animated: true)
   }
 }
