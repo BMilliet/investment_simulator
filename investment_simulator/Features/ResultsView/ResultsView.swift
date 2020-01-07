@@ -15,7 +15,7 @@ class ResultsView: UIViewController, CustomizableByClosure {
   }
 
   required init?(coder: NSCoder) {
-      fatalError("init(coder:) is not supported")
+    fatalError(AppStrings.initError)
   }
 
   override func viewDidLoad() {

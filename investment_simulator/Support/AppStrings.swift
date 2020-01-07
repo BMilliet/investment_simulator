@@ -26,4 +26,5 @@ struct AppStrings {
   static let simulationResult = "Resultado da simulação"
   static let totalIncomeOf = "Rendimento total de "
   static let genericError = "Ops.. algo deu errado"
+  static let initError = "init(coder:) is not supported"
 }

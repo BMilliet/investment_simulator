@@ -6,11 +6,11 @@ protocol RepresenterAssembler {
 extension RepresenterAssembler {
   func redemption(from simulation: Simulation, cdi: String) -> RedemptionRepresenter {
     return RedemptionRepresenter(maturityDate: simulation.investmentParameter.maturityDate,
-                                           maturityTotalDays: simulation.investmentParameter.maturityTotalDays,
-                                           monthlyGrossRateProfit: simulation.monthlyGrossRateProfit,
-                                           investmentCDIPercentage: cdi,
-                                           annualGrossRateProfit: simulation.annualGrossRateProfit,
-                                           rateProfit: simulation.rateProfit)
+                                 maturityTotalDays: simulation.investmentParameter.maturityTotalDays,
+                                 monthlyGrossRateProfit: simulation.monthlyGrossRateProfit,
+                                 investmentCDIPercentage: cdi,
+                                 annualGrossRateProfit: simulation.annualGrossRateProfit,
+                                 rateProfit: simulation.rateProfit)
   }
 
   func balance(from simulation: Simulation, amount: String) -> BalanceRepresenter {

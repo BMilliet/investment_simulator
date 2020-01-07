@@ -28,13 +28,13 @@ class FormViewModel: RepresenterAssembler {
   }
 
   private func fetchRequest() {
-    guard let url = ApiRouter().getSimulationEndPoint(investedAmountValue: valueAmountText.value,
-                                                      rateValue: cdiPercentText.value,
-                                                      maturityDateValue: dateText.value.convertDateInputFormat()) else { return }
-
-    Repository(disposeBag: disposeBag).doRequest(url,
-                                                 Simulation.self,
-                                                 onSuccess, onError)
+    if let url = ApiRouter().getSimulationEndPoint(investedAmountValue: valueAmountText.value,
+                                                   rateValue: cdiPercentText.value,
+                                                   maturityDateValue: dateText.value.convertDateInputFormat()) {
+      Repository(disposeBag: disposeBag).doRequest(url,
+                                                   Simulation.self,
+                                                   onSuccess, onError)
+    }
   }
 
   private func hiddesErrorLabel() {
