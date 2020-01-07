@@ -17,6 +17,11 @@ struct ValueRepresentation {
     return amountValue + percentValue
   }
 
+  func date(_ value: String) -> String {
+    let parse = value.components(separatedBy: "T")
+    return parse[0].convertDateToBrazilianFormat()
+  }
+
   private func baseFormat(_ value: Double) -> String {
     let newValue = value.rounded(toPlaces: 2)
     let string = String(newValue)
