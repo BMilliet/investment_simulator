@@ -65,9 +65,9 @@ class ResultsViewHeaderUIContent: CustomizableByClosure {
   }
 
   private lazy var totalProfitValue = customInit(UILabel()) { label in
-    label.text = profitValue
+    label.text = " " + profitValue
     label.numberOfLines = 1
-    label.textAlignment = .center
+    label.textAlignment = .left
     label.font = UIFont.systemFont(ofSize: Dimens.fontSmall)
     label.adjustsFontSizeToFitWidth = true
     label.isAccessibilityElement = true
@@ -84,13 +84,13 @@ class ResultsViewHeaderUIContent: CustomizableByClosure {
     container.addSubview(totalProfitLabel)
     container.addSubview(totalProfitValue)
     title.anchor(top: container.topAnchor,
-                            leading: container.leadingAnchor,
-                            bottom: container.bottomAnchor)
+                 leading: container.leadingAnchor,
+                 bottom: container.bottomAnchor)
 
     value.anchor(top: container.topAnchor,
-                            leading: totalProfitLabel.trailingAnchor,
-                            bottom: container.bottomAnchor,
-                            trailing: container.trailingAnchor)
+                 leading: totalProfitLabel.trailingAnchor,
+                 bottom: container.bottomAnchor,
+                 trailing: container.trailingAnchor)
     return container
   }
 }
