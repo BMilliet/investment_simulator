@@ -34,6 +34,8 @@
 		1583A23723C297E500398AB3 /* StringTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1583A23623C297E500398AB3 /* StringTest.swift */; };
 		15C0F86523C35517003BA703 /* ResultsViewHeaderUIContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C0F86423C35517003BA703 /* ResultsViewHeaderUIContent.swift */; };
 		15C0F86923C372E5003BA703 /* Spacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C0F86823C372E5003BA703 /* Spacer.swift */; };
+		15D8D3ED23C3F93600DFAE51 /* ResultsViewBalanceUIContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D8D3EC23C3F93600DFAE51 /* ResultsViewBalanceUIContent.swift */; };
+		15D8D3F023C3FA1100DFAE51 /* TitleValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D8D3EF23C3FA1100DFAE51 /* TitleValue.swift */; };
 		15DF498623C0B8CA00428090 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DF498523C0B8CA00428090 /* FormView.swift */; };
 		15DF498923C0B92200428090 /* CustomizableByClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DF498823C0B92200428090 /* CustomizableByClosure.swift */; };
 		15DF498B23C0B94500428090 /* CustomizableByClosureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DF498A23C0B94500428090 /* CustomizableByClosureTest.swift */; };
@@ -100,6 +102,8 @@
 		1583A23623C297E500398AB3 /* StringTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTest.swift; sourceTree = "<group>"; };
 		15C0F86423C35517003BA703 /* ResultsViewHeaderUIContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewHeaderUIContent.swift; sourceTree = "<group>"; };
 		15C0F86823C372E5003BA703 /* Spacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacer.swift; sourceTree = "<group>"; };
+		15D8D3EC23C3F93600DFAE51 /* ResultsViewBalanceUIContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewBalanceUIContent.swift; sourceTree = "<group>"; };
+		15D8D3EF23C3FA1100DFAE51 /* TitleValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleValue.swift; sourceTree = "<group>"; };
 		15DF498523C0B8CA00428090 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		15DF498823C0B92200428090 /* CustomizableByClosure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizableByClosure.swift; sourceTree = "<group>"; };
 		15DF498A23C0B94500428090 /* CustomizableByClosureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizableByClosureTest.swift; sourceTree = "<group>"; };
@@ -244,6 +248,8 @@
 		1583A22923C283E400398AB3 /* ResultsView */ = {
 			isa = PBXGroup;
 			children = (
+				15D8D3EB23C3F8ED00DFAE51 /* Redemption */,
+				15D8D3EA23C3F8B600DFAE51 /* Balance */,
 				15C0F86623C356D4003BA703 /* Header */,
 				1583A22A23C283FC00398AB3 /* ResultsView.swift */,
 			);
@@ -264,6 +270,29 @@
 				15C0F86823C372E5003BA703 /* Spacer.swift */,
 			);
 			path = Spacer;
+			sourceTree = "<group>";
+		};
+		15D8D3EA23C3F8B600DFAE51 /* Balance */ = {
+			isa = PBXGroup;
+			children = (
+				15D8D3EC23C3F93600DFAE51 /* ResultsViewBalanceUIContent.swift */,
+			);
+			path = Balance;
+			sourceTree = "<group>";
+		};
+		15D8D3EB23C3F8ED00DFAE51 /* Redemption */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Redemption;
+			sourceTree = "<group>";
+		};
+		15D8D3EE23C3F9FB00DFAE51 /* TitleValue */ = {
+			isa = PBXGroup;
+			children = (
+				15D8D3EF23C3FA1100DFAE51 /* TitleValue.swift */,
+			);
+			path = TitleValue;
 			sourceTree = "<group>";
 		};
 		15DF498323C0B87D00428090 /* Features */ = {
@@ -297,6 +326,7 @@
 		15DF498C23C0BC3500428090 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				15D8D3EE23C3F9FB00DFAE51 /* TitleValue */,
 				15C0F86723C372D0003BA703 /* Spacer */,
 				15E6F5E123C12FF7004EB8CC /* ErrorLabel */,
 				15E6F5D323C11B8A004EB8CC /* CustomButton */,
@@ -612,9 +642,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15D8D3F023C3FA1100DFAE51 /* TitleValue.swift in Sources */,
 				15E6F5D523C11BA0004EB8CC /* CustomButton.swift in Sources */,
 				154689C623BFE9BB00F32353 /* Simulation.swift in Sources */,
 				154689AF23BFE15400F32353 /* RequestError.swift in Sources */,
+				15D8D3ED23C3F93600DFAE51 /* ResultsViewBalanceUIContent.swift in Sources */,
 				15E6F5D223C11947004EB8CC /* TestStuff.swift in Sources */,
 				154689B623BFE1D400F32353 /* StatusCodeHandler.swift in Sources */,
 				154689B423BFE1A100F32353 /* JsonDecoder.swift in Sources */,
