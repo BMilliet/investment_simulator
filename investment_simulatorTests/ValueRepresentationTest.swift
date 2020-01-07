@@ -45,5 +45,21 @@ class ValueRepresentationTest: QuickSpec {
         }
       }
     }
+
+    describe("#percent") {
+      context("convert to percent representation") {
+
+        let subject1 = representation.percent(17.50)
+        let expected1 = "17,5%"
+
+        let subject2 = representation.percent(123.3442)
+        let expected2 = "123,34%"
+
+        it("check values") {
+          expect(subject1).to(equal(expected1))
+          expect(subject2).to(equal(expected2))
+        }
+      }
+    }
   }
 }

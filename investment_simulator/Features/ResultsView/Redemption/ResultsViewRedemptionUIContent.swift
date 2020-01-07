@@ -8,8 +8,11 @@ class ResultsViewRedemptionUIContent: CustomizableByClosure {
   private let title5: String = AppStrings.annualProfitability
   private let title6: String = AppStrings.profitabilityInThePeriod
   private let titleValue = TitleValue()
+  private let redemption: RedemptionRepresenter
 
-  var amountValue: String = "27/05/2020"
+  init(redemption: RedemptionRepresenter) {
+    self.redemption = redemption
+  }
 
   lazy var container = customInit(UIView()) { view in
     view.size(height: Dimens.size240)
@@ -28,11 +31,19 @@ class ResultsViewRedemptionUIContent: CustomizableByClosure {
     stack.axis = .vertical
     stack.distribution = .fillEqually
     stack.spacing = Dimens.spacing10
-    stack.addArrangedSubviewArray([titleValue.build(titleValue: title1, valueAmount: amountValue),
-                                   titleValue.build(titleValue: title2, valueAmount: amountValue),
-                                   titleValue.build(titleValue: title3, valueAmount: amountValue),
-                                   titleValue.build(titleValue: title4, valueAmount: amountValue),
-                                   titleValue.build(titleValue: title5, valueAmount: amountValue),
-                                   titleValue.build(titleValue: title5, valueAmount: amountValue)])
+
+    let maturityDate = redemption.getMaturityDate()
+    let maturityTotalDays = redemption.getMaturityTotalDays()
+    let monthlyGrossRateProfit = redemption.getMonthlyGrossRateProfit()
+    let investmentCDIPercentage = redemption.getInvestmentCDIPercentage()
+    let annualGrossRateProfit = redemption.getAnnualGrossRateProfit()
+    let rateProfit = redemption.getRateProfit()
+
+    stack.addArrangedSubviewArray([titleValue.build(titleValue: title1, valueAmount: maturityDate),
+                                   titleValue.build(titleValue: title2, valueAmount: maturityTotalDays),
+                                   titleValue.build(titleValue: title3, valueAmount: monthlyGrossRateProfit),
+                                   titleValue.build(titleValue: title4, valueAmount: investmentCDIPercentage),
+                                   titleValue.build(titleValue: title5, valueAmount: annualGrossRateProfit),
+                                   titleValue.build(titleValue: title5, valueAmount: rateProfit)])
   }
 }

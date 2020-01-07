@@ -7,6 +7,10 @@ struct ValueRepresentation {
     return finalString
   }
 
+  func percent(_ value: Double) -> String {
+    return baseFormat(value) + "%"
+  }
+
   func mixedTaxesValue(_ amount: Double, _ percent: Double) -> String {
     let amountValue = currency(amount)
     let percentValue = "(" + baseFormat(percent) + "%)"

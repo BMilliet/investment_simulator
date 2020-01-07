@@ -13,8 +13,6 @@ class ResultsViewBalanceUIContent: CustomizableByClosure {
     self.balance = balance
   }
 
-  var amountValue: String = "R$ 1.088,69"
-
   lazy var container = customInit(UIView()) { view in
     view.size(height: Dimens.size240)
     view.addSubview(stack)
