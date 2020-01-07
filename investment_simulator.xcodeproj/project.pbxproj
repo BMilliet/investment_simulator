@@ -24,6 +24,7 @@
 		154689CA23BFEE9F00F32353 /* StatusCodeHandlerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154689C923BFEE9F00F32353 /* StatusCodeHandlerTest.swift */; };
 		154689CD23BFEEDD00F32353 /* CompareHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154689CC23BFEEDD00F32353 /* CompareHelper.swift */; };
 		154689CF23BFEF1600F32353 /* ApiRouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154689CE23BFEF1600F32353 /* ApiRouterTest.swift */; };
+		15626A1223C4925900A2F253 /* ResultsViewRedemptionUIContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15626A1123C4925900A2F253 /* ResultsViewRedemptionUIContent.swift */; };
 		1583A22823C2835500398AB3 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1583A22723C2835500398AB3 /* UIApplication.swift */; };
 		1583A22B23C283FC00398AB3 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1583A22A23C283FC00398AB3 /* ResultsView.swift */; };
 		1583A22D23C288FE00398AB3 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1583A22C23C288FE00398AB3 /* Validator.swift */; };
@@ -92,6 +93,7 @@
 		154689C923BFEE9F00F32353 /* StatusCodeHandlerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCodeHandlerTest.swift; sourceTree = "<group>"; };
 		154689CC23BFEEDD00F32353 /* CompareHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareHelper.swift; sourceTree = "<group>"; };
 		154689CE23BFEF1600F32353 /* ApiRouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRouterTest.swift; sourceTree = "<group>"; };
+		15626A1123C4925900A2F253 /* ResultsViewRedemptionUIContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewRedemptionUIContent.swift; sourceTree = "<group>"; };
 		1583A22723C2835500398AB3 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		1583A22A23C283FC00398AB3 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 		1583A22C23C288FE00398AB3 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 		15D8D3EB23C3F8ED00DFAE51 /* Redemption */ = {
 			isa = PBXGroup;
 			children = (
+				15626A1123C4925900A2F253 /* ResultsViewRedemptionUIContent.swift */,
 			);
 			path = Redemption;
 			sourceTree = "<group>";
@@ -680,6 +683,7 @@
 				1583A22823C2835500398AB3 /* UIApplication.swift in Sources */,
 				154689A823BFE0E400F32353 /* ApiClient.swift in Sources */,
 				15E9364D23C17FF400743DF7 /* MaskFormatter.swift in Sources */,
+				15626A1223C4925900A2F253 /* ResultsViewRedemptionUIContent.swift in Sources */,
 				15DF498623C0B8CA00428090 /* FormView.swift in Sources */,
 				1583A23323C295A100398AB3 /* Date.swift in Sources */,
 				154689BB23BFE22700F32353 /* Repository.swift in Sources */,

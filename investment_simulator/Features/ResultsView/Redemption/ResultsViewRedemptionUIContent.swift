@@ -1,14 +1,15 @@
 import UIKit
 
-class ResultsViewBalanceUIContent: CustomizableByClosure {
-  private let title1: String = AppStrings.initialValue
-  private let title2: String = AppStrings.fullValue
-  private let title3: String = AppStrings.profitValue
-  private let title4: String = AppStrings.ironinvestment
-  private let title5: String = AppStrings.netInvestmentValue
+class ResultsViewRedemptionUIContent: CustomizableByClosure {
+  private let title1: String = AppStrings.redemptionDate
+  private let title2: String = AppStrings.calendarDays
+  private let title3: String = AppStrings.monthlyIncome
+  private let title4: String = AppStrings.InvestmentCDIPercentage
+  private let title5: String = AppStrings.annualProfitability
+  private let title6: String = AppStrings.profitabilityInThePeriod
   private let titleValue = TitleValue()
 
-  var amountValue: String = "R$ 1.088,69"
+  var amountValue: String = "27/05/2020"
 
   lazy var container = customInit(UIView()) { view in
     view.size(height: Dimens.size240)
@@ -31,6 +32,7 @@ class ResultsViewBalanceUIContent: CustomizableByClosure {
                                    titleValue.build(titleValue: title2, valueAmount: amountValue),
                                    titleValue.build(titleValue: title3, valueAmount: amountValue),
                                    titleValue.build(titleValue: title4, valueAmount: amountValue),
+                                   titleValue.build(titleValue: title5, valueAmount: amountValue),
                                    titleValue.build(titleValue: title5, valueAmount: amountValue)])
   }
 }
