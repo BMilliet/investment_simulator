@@ -17,7 +17,13 @@ struct CompareHelper {
       if (rhs == .unknown) { return true }
     case .jsonParsingError(_):
       return false
+    case .emptyDataError:
+      return false
     }
     return false
+  }
+
+  func isSimulation(_ object: Any) -> Bool {
+      return type(of: object) is RequestResult<Simulation>.Type
   }
 }
