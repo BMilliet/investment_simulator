@@ -55,7 +55,6 @@
 		15DF499823C0CB8800428090 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DF499723C0CB8800428090 /* Colors.swift */; };
 		15DF499A23C0DD8D00428090 /* FormViewUIContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DF499923C0DD8D00428090 /* FormViewUIContent.swift */; };
 		15E6F5D023C0EE25004EB8CC /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E6F5CF23C0EE25004EB8CC /* AppStrings.swift */; };
-		15E6F5D223C11947004EB8CC /* TestStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E6F5D123C11947004EB8CC /* TestStuff.swift */; };
 		15E6F5D523C11BA0004EB8CC /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E6F5D423C11BA0004EB8CC /* CustomButton.swift */; };
 		15E6F5DB23C127A2004EB8CC /* FormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E6F5DA23C127A2004EB8CC /* FormViewModel.swift */; };
 		15E6F5DD23C12CF2004EB8CC /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E6F5DC23C12CF2004EB8CC /* UIStackView.swift */; };
@@ -131,7 +130,6 @@
 		15DF499723C0CB8800428090 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		15DF499923C0DD8D00428090 /* FormViewUIContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewUIContent.swift; sourceTree = "<group>"; };
 		15E6F5CF23C0EE25004EB8CC /* AppStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStrings.swift; sourceTree = "<group>"; };
-		15E6F5D123C11947004EB8CC /* TestStuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStuff.swift; sourceTree = "<group>"; };
 		15E6F5D423C11BA0004EB8CC /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		15E6F5DA23C127A2004EB8CC /* FormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewModel.swift; sourceTree = "<group>"; };
 		15E6F5DC23C12CF2004EB8CC /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
@@ -439,7 +437,6 @@
 				154689BC23BFE4CD00F32353 /* Extensions */,
 				154689A523BFE07C00F32353 /* Network */,
 				15E7D12923BFD16500B709AE /* AppDelegate.swift */,
-				15E6F5D123C11947004EB8CC /* TestStuff.swift */,
 				15E7D13223BFD16600B709AE /* Assets.xcassets */,
 				15E7D13423BFD16600B709AE /* LaunchScreen.storyboard */,
 				15E7D13723BFD16600B709AE /* Info.plist */,
@@ -679,7 +676,6 @@
 				154689C623BFE9BB00F32353 /* Simulation.swift in Sources */,
 				154689AF23BFE15400F32353 /* RequestError.swift in Sources */,
 				15D8D3ED23C3F93600DFAE51 /* ResultsViewBalanceUIContent.swift in Sources */,
-				15E6F5D223C11947004EB8CC /* TestStuff.swift in Sources */,
 				154689B623BFE1D400F32353 /* StatusCodeHandler.swift in Sources */,
 				154689B423BFE1A100F32353 /* JsonDecoder.swift in Sources */,
 				15626A1B23C4AAF200A2F253 /* ValueRepresentation.swift in Sources */,

@@ -23,7 +23,7 @@ class FormView: UIViewController, UITextFieldDelegate, CustomizableByClosure {
     setAccessibilityValues()
     setupScrollConstraints()
     setupStackConstraints()
-    setupButton()
+    setupContentConstraints()
     setTextFieldModels()
     bindToModel()
   }
@@ -44,7 +44,8 @@ class FormView: UIViewController, UITextFieldDelegate, CustomizableByClosure {
   }
 
   private func addGesture() {
-    let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+    let tap = UITapGestureRecognizer(target: view,
+                                     action: #selector(UIView.endEditing))
     tap.cancelsTouchesInView = false
     view.addGestureRecognizer(tap)
   }
@@ -93,7 +94,10 @@ class FormView: UIViewController, UITextFieldDelegate, CustomizableByClosure {
     stack.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
   }
 
-  private func setupButton() {
+  private func setupContentConstraints() {
+    valueAmountForm.build().size(width: view.frame.width - Dimens.spacing32)
+    dateForm.build().size(width: view.frame.width - Dimens.spacing32)
+    cdiPercentForm.build().size(width: view.frame.width - Dimens.spacing32)
     submitButton.size(width: view.frame.width - Dimens.spacing32)
   }
 }
