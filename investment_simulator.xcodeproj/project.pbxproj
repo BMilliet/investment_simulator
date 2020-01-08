@@ -10,6 +10,8 @@
 		152E4C5323C60199004D8875 /* ValueFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152E4C5223C60199004D8875 /* ValueFieldModel.swift */; };
 		152E4C5523C609FC004D8875 /* MaskFormatterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152E4C5423C609FC004D8875 /* MaskFormatterTest.swift */; };
 		152E4C5723C60FE8004D8875 /* InputErrorHandlerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152E4C5623C60FE8004D8875 /* InputErrorHandlerTest.swift */; };
+		152E4C5923C61600004D8875 /* JsonDecoderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152E4C5823C61600004D8875 /* JsonDecoderTest.swift */; };
+		152E4C5B23C61633004D8875 /* JsonMoscks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152E4C5A23C61633004D8875 /* JsonMoscks.swift */; };
 		154689A823BFE0E400F32353 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154689A723BFE0E400F32353 /* ApiClient.swift */; };
 		154689AA23BFE10100F32353 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154689A923BFE10100F32353 /* ApiError.swift */; };
 		154689AC23BFE11F00F32353 /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154689AB23BFE11F00F32353 /* ApiRouter.swift */; };
@@ -86,6 +88,8 @@
 		152E4C5223C60199004D8875 /* ValueFieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueFieldModel.swift; sourceTree = "<group>"; };
 		152E4C5423C609FC004D8875 /* MaskFormatterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskFormatterTest.swift; sourceTree = "<group>"; };
 		152E4C5623C60FE8004D8875 /* InputErrorHandlerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputErrorHandlerTest.swift; sourceTree = "<group>"; };
+		152E4C5823C61600004D8875 /* JsonDecoderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDecoderTest.swift; sourceTree = "<group>"; };
+		152E4C5A23C61633004D8875 /* JsonMoscks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonMoscks.swift; sourceTree = "<group>"; };
 		154689A723BFE0E400F32353 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		154689A923BFE10100F32353 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		154689AB23BFE11F00F32353 /* ApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
@@ -259,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				154689CC23BFEEDD00F32353 /* CompareHelper.swift */,
+				152E4C5A23C61633004D8875 /* JsonMoscks.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -461,6 +466,7 @@
 				15626A1C23C4AB7700A2F253 /* ValueRepresentationTest.swift */,
 				152E4C5423C609FC004D8875 /* MaskFormatterTest.swift */,
 				152E4C5623C60FE8004D8875 /* InputErrorHandlerTest.swift */,
+				152E4C5823C61600004D8875 /* JsonDecoderTest.swift */,
 			);
 			path = investment_simulatorTests;
 			sourceTree = "<group>";
@@ -728,6 +734,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				152E4C5923C61600004D8875 /* JsonDecoderTest.swift in Sources */,
 				154689C823BFEE6700F32353 /* URLTest.swift in Sources */,
 				1583A23523C2960300398AB3 /* DateTest.swift in Sources */,
 				1583A23723C297E500398AB3 /* StringTest.swift in Sources */,
@@ -736,6 +743,7 @@
 				15DF498B23C0B94500428090 /* CustomizableByClosureTest.swift in Sources */,
 				154689CA23BFEE9F00F32353 /* StatusCodeHandlerTest.swift in Sources */,
 				152E4C5523C609FC004D8875 /* MaskFormatterTest.swift in Sources */,
+				152E4C5B23C61633004D8875 /* JsonMoscks.swift in Sources */,
 				15626A1D23C4AB7700A2F253 /* ValueRepresentationTest.swift in Sources */,
 				1583A22F23C2899800398AB3 /* ValidatorTest.swift in Sources */,
 				154689CD23BFEEDD00F32353 /* CompareHelper.swift in Sources */,

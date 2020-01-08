@@ -22,4 +22,8 @@ struct CompareHelper {
     }
     return false
   }
+
+  func isSimulation(_ object: Any) -> Bool {
+      return type(of: object) is RequestResult<Simulation>.Type
+  }
 }
