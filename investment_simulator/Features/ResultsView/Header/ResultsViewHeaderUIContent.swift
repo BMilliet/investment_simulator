@@ -19,6 +19,7 @@ class ResultsViewHeaderUIContent: CustomizableByClosure {
 
   private lazy var stack = customInit(UIStackView()) { stack in
     stack.axis = .vertical
+    stack.alignment = .center
     stack.spacing = Dimens.spacing10
     stack.addArrangedSubviewArray([titleLabel,
                                    amountLabel,
@@ -54,7 +55,7 @@ class ResultsViewHeaderUIContent: CustomizableByClosure {
   private lazy var totalProfitLabel = customInit(UILabel()) { label in
     label.text = AppStrings.totalIncomeOf
     label.numberOfLines = 1
-    label.textAlignment = .center
+    label.textAlignment = .right
     label.font = UIFont.systemFont(ofSize: Dimens.fontSmall)
     label.adjustsFontSizeToFitWidth = true
     label.isAccessibilityElement = true
