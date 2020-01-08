@@ -35,6 +35,8 @@ class ResultsViewHeaderUIContent: CustomizableByClosure {
     label.isAccessibilityElement = true
     label.accessibilityTraits = .staticText
     label.accessibilityLanguage = AppStrings.acceptedLanguage
+    label.accessibilityHint = AppStrings.simulationResult
+    label.accessibilityValue = AppStrings.simulationResult
     label.minimumScaleFactor = Dimens.minimumTextScale
     label.textColor = Colors.mediumLightColor
   }
@@ -48,6 +50,7 @@ class ResultsViewHeaderUIContent: CustomizableByClosure {
     label.isAccessibilityElement = true
     label.accessibilityTraits = .staticText
     label.accessibilityLanguage = AppStrings.acceptedLanguage
+    label.accessibilityValue = amountValue
     label.minimumScaleFactor = Dimens.minimumTextScale
     label.textColor = .black
   }
@@ -61,6 +64,8 @@ class ResultsViewHeaderUIContent: CustomizableByClosure {
     label.isAccessibilityElement = true
     label.accessibilityTraits = .staticText
     label.accessibilityLanguage = AppStrings.acceptedLanguage
+    label.accessibilityHint = AppStrings.totalIncomeOf
+    label.accessibilityValue = AppStrings.totalIncomeOf
     label.minimumScaleFactor = Dimens.minimumTextScale
     label.textColor = Colors.mediumLightColor
   }
@@ -74,6 +79,7 @@ class ResultsViewHeaderUIContent: CustomizableByClosure {
     label.isAccessibilityElement = true
     label.accessibilityTraits = .staticText
     label.accessibilityLanguage = AppStrings.acceptedLanguage
+    label.accessibilityValue = profitValue
     label.minimumScaleFactor = Dimens.minimumTextScale
     label.textColor = Colors.primaryColor
   }
