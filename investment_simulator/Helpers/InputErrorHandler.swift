@@ -18,7 +18,7 @@ struct InputErrorHandler {
     }
 
     if !validator.isValidDate(date: dateText,
-                              todayDate: "08/01/2020") {
+                              todayDate: DateHelper.getTodayDate()) {
       completion(AppStrings.invalidDate)
       return true
     }

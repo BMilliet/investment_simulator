@@ -69,7 +69,8 @@ class ValidatorTest: QuickSpec {
       context("check valid percentage value") {
 
         let mockCurrentDate = "05/01/2020"
-        let validDate = "06/01/2020"
+        let validDate1 = "06/01/2020"
+        let validDate2 = "05/01/2020"
         let invalidDate1 = "04/01/2020"
         let invalidDate2 = "04/01/20"
         let invalidDate3 = "00/01/2020"
@@ -80,7 +81,8 @@ class ValidatorTest: QuickSpec {
         let invalidDate8 = "date"
 
         it("compare values") {
-          expect(validator.isValidDate(date: validDate, todayDate: mockCurrentDate)).to(beTrue())
+          expect(validator.isValidDate(date: validDate1, todayDate: mockCurrentDate)).to(beTrue())
+          expect(validator.isValidDate(date: validDate2, todayDate: mockCurrentDate)).to(beTrue())
           expect(validator.isValidDate(date: invalidDate1, todayDate: mockCurrentDate)).to(beFalse())
           expect(validator.isValidDate(date: invalidDate2, todayDate: mockCurrentDate)).to(beFalse())
           expect(validator.isValidDate(date: invalidDate3, todayDate: mockCurrentDate)).to(beFalse())

@@ -17,7 +17,7 @@ struct Validator {
   func isValidDate(date: String, todayDate: String) -> Bool {
     guard let validDate = Date(date.convertDateInputFormat()) else { return false }
     guard let today = Date(todayDate.convertDateInputFormat()) else { return false }
-    return validDate > today
+    return validDate.timeIntervalSince1970 >= today.timeIntervalSince1970
   }
 
   private func hasValidNumberOfDots(_ stringValue: String) -> Bool {
