@@ -5,6 +5,10 @@ extension String {
     return convert(dateString: self, fromDateFormat: "dd/MM/yyyy", toDateFormat: "yyyy-MM-dd") ?? "0"
   }
 
+  func convertDateToBrazilianFormat() -> String {
+    return convert(dateString: self, fromDateFormat: "yyyy-MM-dd", toDateFormat: "dd/MM/yyyy") ?? "0"
+  }
+
   func separate(every stride: Int = 4,
                 with separator: Character = " ") -> String {
     return String(enumerated().map { $0 > 0 && $0 % stride == 0 ? [separator, $1] : [$1] }.joined())

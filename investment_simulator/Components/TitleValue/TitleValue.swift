@@ -26,6 +26,8 @@ struct TitleValue {
     label.accessibilityLabel = label.text
     label.accessibilityValue = label.text
     label.minimumScaleFactor = Dimens.minimumTextScale
+    label.setContentCompressionResistancePriority(.defaultHigh,
+                                                  for: .horizontal)
     label.textColor = Colors.mediumLightColor
     return label
   }
@@ -44,8 +46,9 @@ struct TitleValue {
     label.accessibilityLabel = label.text
     label.accessibilityValue = label.text
     label.minimumScaleFactor = Dimens.minimumTextScale
+    label.setContentCompressionResistancePriority(.defaultLow,
+                                                  for: .horizontal)
     label.textColor = Colors.mediumLightColor
-    label.size(width: 240)
     return label
   }
 }

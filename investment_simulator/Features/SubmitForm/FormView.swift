@@ -11,8 +11,7 @@ class FormView: UIViewController, UITextFieldDelegate, CustomizableByClosure {
   private let submitButton = FormViewUIContent.submitButton()
   private let errorLabel = FormViewUIContent.errorLabel()
   private let dateFieldModel = DateFieldModel()
-  private let percentFieldModel = PercentFieldModel()
-  private let amountFieldModel = AmountFieldModel()
+  private let valueFieldModel = ValueFieldModel()
   private let scrollView = UIScrollView()
 
   override func viewDidLoad() {
@@ -23,7 +22,7 @@ class FormView: UIViewController, UITextFieldDelegate, CustomizableByClosure {
     setAccessibilityValues()
     setupScrollConstraints()
     setupStackConstraints()
-    setupButton()
+    setupContentConstraints()
     setTextFieldModels()
     bindToModel()
   }
@@ -44,7 +43,8 @@ class FormView: UIViewController, UITextFieldDelegate, CustomizableByClosure {
   }
 
   private func addGesture() {
-    let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+    let tap = UITapGestureRecognizer(target: view,
+                                     action: #selector(UIView.endEditing))
     tap.cancelsTouchesInView = false
     view.addGestureRecognizer(tap)
   }
@@ -57,8 +57,8 @@ class FormView: UIViewController, UITextFieldDelegate, CustomizableByClosure {
 
   private func setTextFieldModels() {
     dateForm.getTextField().delegate = dateFieldModel
-    valueAmountForm.getTextField().delegate = amountFieldModel
-    cdiPercentForm.getTextField().delegate = percentFieldModel
+    valueAmountForm.getTextField().delegate = valueFieldModel
+    cdiPercentForm.getTextField().delegate = valueFieldModel
   }
 
   private func addUIComponents() {
@@ -93,7 +93,10 @@ class FormView: UIViewController, UITextFieldDelegate, CustomizableByClosure {
     stack.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
   }
 
-  private func setupButton() {
-    submitButton.size(width: view.frame.width - Dimens.spacing32)
+  private func setupContentConstraints() {
+    valueAmountForm.build().size(width: view.frame.width - Dimens.spacing16)
+    dateForm.build().size(width: view.frame.width - Dimens.spacing16)
+    cdiPercentForm.build().size(width: view.frame.width - Dimens.spacing16)
+    submitButton.size(width: view.frame.width - Dimens.spacing16)
   }
 }

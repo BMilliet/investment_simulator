@@ -61,5 +61,17 @@ class ValueRepresentationTest: QuickSpec {
         }
       }
     }
+
+    describe("#date") {
+      context("response date to ui representation") {
+
+        let subject = representation.date("2024-10-28T00:00:00")
+        let expected = "28/10/2024"
+
+        it("check values") {
+          expect(subject).to(equal(expected))
+        }
+      }
+    }
   }
 }

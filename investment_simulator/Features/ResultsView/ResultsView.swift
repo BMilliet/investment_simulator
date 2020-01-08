@@ -8,9 +8,13 @@ class ResultsView: UIViewController, CustomizableByClosure {
   private let scrollView = UIScrollView()
 
   init(balance: ResultsViewBalanceUIContent,
-       redemption: ResultsViewRedemptionUIContent) {
+       redemption: ResultsViewRedemptionUIContent,
+       amount: String,
+       profit: String) {
       self.balance = balance
       self.redemption = redemption
+      header.amountValue = amount
+      header.profitValue = profit
       super.init(nibName: nil, bundle: nil)
   }
 
@@ -24,7 +28,8 @@ class ResultsView: UIViewController, CustomizableByClosure {
     addUIComponents()
     setupScrollConstraints()
     setupStackConstraints()
-    setupButton()
+    setupContentConstraints()
+    setButtonAction()
   }
 
   lazy var stack = customInit(UIStackView()) { stack in
@@ -44,7 +49,8 @@ class ResultsView: UIViewController, CustomizableByClosure {
                                    header.container,
                                    balance.container,
                                    redemption.container,
-                                   submitButton])
+                                   submitButton,
+                                   Spacer.build(height: Dimens.size20)])
   }
 
   private func setupScrollConstraints() {
@@ -63,7 +69,17 @@ class ResultsView: UIViewController, CustomizableByClosure {
     stack.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
   }
 
-  private func setupButton() {
-    submitButton.size(width: view.frame.width - Dimens.spacing32)
+  private func setupContentConstraints() {
+    balance.container.size(width: view.frame.width - Dimens.spacing16)
+    redemption.container.size(width: view.frame.width - Dimens.spacing16)
+    submitButton.size(width: view.frame.width - Dimens.spacing16)
+  }
+
+  private func setButtonAction() {
+    submitButton.addTarget(self, action: #selector(popView), for: .touchUpInside)
+  }
+
+  @objc private func popView() {
+    self.navigationController?.popViewController(animated: true)
   }
 }

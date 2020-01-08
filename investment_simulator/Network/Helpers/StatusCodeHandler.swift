@@ -3,6 +3,10 @@ struct StatusCodeHandler {
     return !(200 ... 299).contains(statusCode)
   }
 
+  func emptyDataError() -> RequestError {
+    return RequestError.emptyDataError
+  }
+
   func returnApiError(for statusCode: Int) -> RequestError {
     switch statusCode {
     case 401:

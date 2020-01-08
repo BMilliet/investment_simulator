@@ -22,7 +22,7 @@ struct RedemptionRepresenter {
   }
 
   func getMaturityDate() -> String {
-    return maturityDate
+    return helper.date(maturityDate)
   }
 
   func getMaturityTotalDays() -> String {
