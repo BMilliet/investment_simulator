@@ -95,9 +95,9 @@ class FormView: UIViewController, UITextFieldDelegate, CustomizableByClosure {
   }
 
   private func setupContentConstraints() {
-    valueAmountForm.build().size(width: view.frame.width - Dimens.spacing32)
-    dateForm.build().size(width: view.frame.width - Dimens.spacing32)
-    cdiPercentForm.build().size(width: view.frame.width - Dimens.spacing32)
-    submitButton.size(width: view.frame.width - Dimens.spacing32)
+    valueAmountForm.build().size(width: view.frame.width - Dimens.spacing16)
+    dateForm.build().size(width: view.frame.width - Dimens.spacing16)
+    cdiPercentForm.build().size(width: view.frame.width - Dimens.spacing16)
+    submitButton.size(width: view.frame.width - Dimens.spacing16)
   }
 }
