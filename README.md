@@ -8,13 +8,13 @@ Your goal is to create an app with two screens, one displaying a form and one di
 Swift 4\
 Target iOS 11\
 Use autolayout\
-Use SwiftLint\
+Use SwiftLint
 
 ## Plus:
 Dynamic Type\
 Accessibility\
-NSURLSession Codable\
+NSURLSession Codable
 
 ## What we expect
 Tests, at least unit tests\
-Design Pattern and Good Object Orientation Practices\
+Design Pattern and Good Object Orientation Practices
