@@ -11,8 +11,7 @@ class FormView: UIViewController, UITextFieldDelegate, CustomizableByClosure {
   private let submitButton = FormViewUIContent.submitButton()
   private let errorLabel = FormViewUIContent.errorLabel()
   private let dateFieldModel = DateFieldModel()
-  private let percentFieldModel = PercentFieldModel()
-  private let amountFieldModel = AmountFieldModel()
+  private let valueFieldModel = ValueFieldModel()
   private let scrollView = UIScrollView()
 
   override func viewDidLoad() {
@@ -58,8 +57,8 @@ class FormView: UIViewController, UITextFieldDelegate, CustomizableByClosure {
 
   private func setTextFieldModels() {
     dateForm.getTextField().delegate = dateFieldModel
-    valueAmountForm.getTextField().delegate = amountFieldModel
-    cdiPercentForm.getTextField().delegate = percentFieldModel
+    valueAmountForm.getTextField().delegate = valueFieldModel
+    cdiPercentForm.getTextField().delegate = valueFieldModel
   }
 
   private func addUIComponents() {

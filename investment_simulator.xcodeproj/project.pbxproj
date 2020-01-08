@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		152E4C5323C60199004D8875 /* ValueFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152E4C5223C60199004D8875 /* ValueFieldModel.swift */; };
 		154689A823BFE0E400F32353 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154689A723BFE0E400F32353 /* ApiClient.swift */; };
 		154689AA23BFE10100F32353 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154689A923BFE10100F32353 /* ApiError.swift */; };
 		154689AC23BFE11F00F32353 /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154689AB23BFE11F00F32353 /* ApiRouter.swift */; };
@@ -64,8 +65,6 @@
 		15E7D13623BFD16600B709AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15E7D13423BFD16600B709AE /* LaunchScreen.storyboard */; };
 		15E9364D23C17FF400743DF7 /* MaskFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E9364C23C17FF400743DF7 /* MaskFormatter.swift */; };
 		15E9365023C1814400743DF7 /* DateFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E9364F23C1814400743DF7 /* DateFieldModel.swift */; };
-		15E9365223C181C900743DF7 /* PercentFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E9365123C181C900743DF7 /* PercentFieldModel.swift */; };
-		15E9365423C1867000743DF7 /* AmountFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E9365323C1867000743DF7 /* AmountFieldModel.swift */; };
 		C013F0DEE3BE047C9CC35CAD /* libPods-investment_simulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8DF0A538C274ED1FF2E8F0 /* libPods-investment_simulator.a */; };
 		F13BDE838BA75F0B47C0BE95 /* libPods-investment_simulatorTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C96C8F6F6E6DA8C162740B5 /* libPods-investment_simulatorTests.a */; };
 /* End PBXBuildFile section */
@@ -82,6 +81,7 @@
 
 /* Begin PBXFileReference section */
 		0D8DF0A538C274ED1FF2E8F0 /* libPods-investment_simulator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-investment_simulator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		152E4C5223C60199004D8875 /* ValueFieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueFieldModel.swift; sourceTree = "<group>"; };
 		154689A723BFE0E400F32353 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		154689A923BFE10100F32353 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		154689AB23BFE11F00F32353 /* ApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
@@ -143,8 +143,6 @@
 		15E7D14223BFD16600B709AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15E9364C23C17FF400743DF7 /* MaskFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskFormatter.swift; sourceTree = "<group>"; };
 		15E9364F23C1814400743DF7 /* DateFieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFieldModel.swift; sourceTree = "<group>"; };
-		15E9365123C181C900743DF7 /* PercentFieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentFieldModel.swift; sourceTree = "<group>"; };
-		15E9365323C1867000743DF7 /* AmountFieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountFieldModel.swift; sourceTree = "<group>"; };
 		1DA00CE5336A34C574694F03 /* Pods-investment_simulator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-investment_simulator.debug.xcconfig"; path = "Target Support Files/Pods-investment_simulator/Pods-investment_simulator.debug.xcconfig"; sourceTree = "<group>"; };
 		4C96C8F6F6E6DA8C162740B5 /* libPods-investment_simulatorTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-investment_simulatorTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		655DA70FD1681FA1AA42B20C /* Pods-investment_simulator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-investment_simulator.release.xcconfig"; path = "Target Support Files/Pods-investment_simulator/Pods-investment_simulator.release.xcconfig"; sourceTree = "<group>"; };
@@ -477,8 +475,7 @@
 			isa = PBXGroup;
 			children = (
 				15E9364F23C1814400743DF7 /* DateFieldModel.swift */,
-				15E9365123C181C900743DF7 /* PercentFieldModel.swift */,
-				15E9365323C1867000743DF7 /* AmountFieldModel.swift */,
+				152E4C5223C60199004D8875 /* ValueFieldModel.swift */,
 			);
 			path = TextFieldModels;
 			sourceTree = "<group>";
@@ -693,10 +690,8 @@
 				15DF499823C0CB8800428090 /* Colors.swift in Sources */,
 				15E6F5E323C1300A004EB8CC /* ErrorLabel.swift in Sources */,
 				1583A22B23C283FC00398AB3 /* ResultsView.swift in Sources */,
-				15E9365223C181C900743DF7 /* PercentFieldModel.swift in Sources */,
 				15AAA42323C5E77800B7F80B /* DateHelper.swift in Sources */,
 				15C0F86923C372E5003BA703 /* Spacer.swift in Sources */,
-				15E9365423C1867000743DF7 /* AmountFieldModel.swift in Sources */,
 				154689C423BFE8EC00F32353 /* InvestmentParameter.swift in Sources */,
 				154689AA23BFE10100F32353 /* ApiError.swift in Sources */,
 				15E6F5D023C0EE25004EB8CC /* AppStrings.swift in Sources */,
@@ -706,6 +701,7 @@
 				15E6F5DB23C127A2004EB8CC /* FormViewModel.swift in Sources */,
 				1583A23123C294DD00398AB3 /* String.swift in Sources */,
 				15626A1F23C4B45300A2F253 /* Double.swift in Sources */,
+				152E4C5323C60199004D8875 /* ValueFieldModel.swift in Sources */,
 				154689B123BFE17C00F32353 /* RequestResult.swift in Sources */,
 				1583A22D23C288FE00398AB3 /* Validator.swift in Sources */,
 				15E6F5DD23C12CF2004EB8CC /* UIStackView.swift in Sources */,

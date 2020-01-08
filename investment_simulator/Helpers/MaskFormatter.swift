@@ -12,23 +12,13 @@ struct MaskFormatter {
     return finalText
   }
 
-  func percentMask(_ baseText: String, _ char: String) -> String {
-    var finalText = baseText
-    let maskValue = Character(".")
-    deletionHandle(&finalText, char, maskValue)
-    if isMaxLength(baseText, 25) { return finalText }
-    finalText.append(char)
-    appendMaskAt(&finalText, especial: maskValue, index: 3)
-    return finalText
-  }
-
-  func amountMask(_ baseText: String, _ char: String) -> String {
+  func valueMask(_ baseText: String, _ char: String) -> String {
     var finalText = baseText
     if isBackSpace(char) {
       deleteLastChar(&finalText)
       return finalText
     }
-    if isMaxLength(baseText, 25) { return finalText }
+    if isMaxLength(baseText, 27) { return finalText }
     finalText.append(char)
     return finalText
   }

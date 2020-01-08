@@ -24,11 +24,6 @@ struct ApiClient {
     }
   }
 
-  func getPosterData(_ path: URL) -> Data? {
-    do { return try Data(contentsOf: path)
-    } catch { return nil }
-  }
-
   private func request<T: Decodable>(_ url: URL,
                                      _ objectType: T.Type,
                                      _ completion: @escaping (RequestResult<T>) -> Void) {
@@ -39,7 +34,10 @@ struct ApiClient {
           return completion(RequestResult.failure(handler.returnApiError(for: httpResponse.statusCode)))
         }
       }
-      completion(JsonDecoder().decodeFromJson(objectType, data))
+      guard let dataUnwrap = data else {
+        return completion(RequestResult.failure(.emptyDataError))
+      }
+      completion(JsonDecoder().decodeFromJson(objectType, dataUnwrap))
     }).resume()
   }
 }
